@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1>TP1 - Ejercicio 1</h1>
+    <hr>
+    <br>
     <form action="vernumero.php" method="post">
-        <label for="num">Ingrese un número</label>
+        <label for="num">Ingrese un número: </label>
         <input type="number" name="num" id="num">
-        <br>
-        <label for="num2">Ingrese otro número</label>
-        <input type="number" name="num2" id="num2">
+        <br><br>
         <input type="submit" value="Enviar">
     </form>
 </body>

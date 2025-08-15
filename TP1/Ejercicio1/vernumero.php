@@ -6,32 +6,26 @@
     <title>Ver número</title>
 </head>
 <body>
-    <h1>Ver número</h1>
+    <h1 style="float: left">Resultado:</h1>
+    <br><br>
+    <a href="http://localhost/PWD_2025/TP1/Ejercicio1/Ejercicio1.php" style="float: right">← Volver a la página anterior</a>
+    <br ><br>
+    <hr>
+    
     <?php
     //Obtener los números ingresados
     $num = $_POST["num"];
-    $num2 = $_POST["num2"];
     
     //Verificar si el primer número es positivo, negativo o cero
     if ($num > 0){
-        echo "El primer número ingresado es positivo <br>";
+        echo "El primer número ingresado es: <b>positivo</b> <br>";
     } else if ($num < 0){
-        echo "El primer número ingresado es negativo <br>";
+        echo "El primer número ingresado es: <b>negativo</b> <br>";
     } else if ($num == 0){
-        echo "El primer número ingresado es cero <br>";
+        echo "El primer número ingresado es: <b>cero</b> <br>";
     }
 
-    //Verificar si el segundo número es positivo, negativo o cero
-    if ($num2 > 0){
-        echo "El segundo número ingresado es positivo <br>";
-    } else if ($num2 < 0){
-        echo "El segundo número ingresado es negativo <br>";
-    } else if ($num2 == 0){
-        echo "El segundo número ingresado es cero <br>";
-    }
-
-    echo "El primer número ingresado es: $num <br>";
-    echo "El segundo número ingresado es: $num2 <br>";
+    echo "El número ingresado fue: <b>$num</b> <br>";
     ?>
 </body>
 </html>
