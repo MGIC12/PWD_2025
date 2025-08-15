@@ -4,14 +4,16 @@ $nombre = $_GET["nombre"];
 $apellido = $_GET["apellido"];
 $edad = $_GET["edad"];
 $direccion = $_GET["direccion"];
-$deporte = $_GET["deporte"];
+$futbol = isset($_GET['futbol']) ? $_GET['futbol'] : '';
+$basquetbol = isset($_GET['basquetbol']) ? $_GET['basquetbol'] : '';
+$tenis = isset($_GET['tenis']) ? $_GET['tenis'] : '';
+$voley = isset($_GET['voley']) ? $_GET['voley'] : '';
 
-if ($deporte == "futbol"){
-    echo "Hola, yo soy ", "<b>$nombre</b>", ", ", "<b>$apellido</b>", ", ", "tengo ", "<b>$edad</b>", " años y vivo en ", "<b>$direccion</b>", " y me gusta el futbol";
-} else if ($deporte == "basquet"){
-    echo "Hola, yo soy ", "<b>$nombre</b>", ", ", "<b>$apellido</b>", ", ", "tengo ", "<b>$edad</b>", " años y vivo en ", "<b>$direccion</b>", " y me gusta el basquet";
-} else if ($deporte == "tenis"){
-    echo "Hola, yo soy ", "<b>$nombre</b>", ", ", "<b>$apellido</b>", ", ", "tengo ", "<b>$edad</b>", " años y vivo en ", "<b>$direccion</b>", " y me gusta el tenis";
-}
+$cantidad_deportes = 0;
+if ($futbol != '') $cantidad_deportes++;
+if ($basquetbol != '') $cantidad_deportes++;
+if ($tenis != '') $cantidad_deportes++;
+if ($voley != '') $cantidad_deportes++;
 
+echo "$nombre $apellido tiene $edad años y vive en $direccion. Practica $cantidad_deportes deportes.";
 ?>
