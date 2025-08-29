@@ -42,23 +42,18 @@
                     } elseif ($tamanio > $maximo) {
                         echo "<div class='alert alert-danger'>❌ El archivo supera los 2MB</div>";
                     } else {
-                        // Carpeta destino (un nivel arriba de Vista)
+                        // Carpeta destino
                         $carpetaUploads = __DIR__ . "/../Uploads";
 
-                        // Crear carpeta si no existe
                         if (!is_dir($carpetaUploads)) mkdir($carpetaUploads, 0777, true);
 
-                        // Ruta física donde guardar el archivo
-                        $rutaFisica = $carpetaUploads . "/" . uniqid() . "_" . $nombre;
-
-                        // Ruta accesible por el navegador
-                        $rutaWeb = "../Uploads/" . basename($rutaFisica);
+                        // Ruta donde guardar el archivo
+                        $ruta = $carpetaUploads . "/" . uniqid() . "_" . $nombre;
 
                         // Mover archivo
-                        if (move_uploaded_file($tmp, $rutaFisica)) {
+                        if (move_uploaded_file($tmp, $ruta)) {
                             echo "<div class='alert alert-success'>";
                             echo "✅ Archivo subido con éxito<br>";
-                            echo "<a href='$rutaWeb' target='_blank' class='btn btn-link mt-2'>Abrir archivo</a>";
                             echo "</div>";
                         } else {
                             echo "<div class='alert alert-danger'>❌ Error al guardar el archivo</div>";
