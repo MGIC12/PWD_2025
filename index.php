@@ -27,15 +27,48 @@
           <a class="nav-link" href="TP2/index.php">TP 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">TP 3</a>
+          <a class="nav-link" href="TP3/index.php">TP 3</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 <main class="bg-primary container">
-    <h1 class="text-center text-white">Bienvenido a PWD 2025</h1>
-    <h2 class="text-center text-white fw-bold my-5 pt-5">Integrantes:</h2>
+<div class="typewriter text-center text-white py-5">
+    <span id="text"></span><span class="cursor">&nbsp;</span>
+</div>
+<style>
+  
+.typewriter {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Courier New", monospace;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: #ffffffff;
+  animation: blink 0.7s infinite;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+</style>
+<section>
+  <h2 class="text-center text-white fw-bold my-5 pt-5">Integrantes:</h2>
     <div class="card-group container my-5 gap-2" data-bs-theme="dark">
       <div class="card rounded-1 border border-secondary">
         <img class="card-img-top" src="https://avatars.githubusercontent.com/u/150484970?v=4" alt="Card image cap" loading="lazy">
@@ -66,6 +99,8 @@
         </div>
       </div>
     </div>
+</section>
 </main>
+<script src="./resources/js/typewriter.js"></script>
 </body>
 </html>

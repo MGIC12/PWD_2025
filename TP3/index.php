@@ -17,34 +17,29 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="../index.php">Home
-            <span class="visually-hidden">(current)</span>
-          </a>
+          <a class="nav-link" href="../index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../TP1/index.php">TP 1</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">TP 2</a>
+          <a class="nav-link" href="../TP2/index.php">TP 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../TP3/index.php">TP 3</a>
+          <a class="nav-link active" href="#">TP 3</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 <main class="container bg-primary">
-    <h1 class="text-center text-white">Trabajo Práctico 2</h1>
-    <section class="row text-center pt-3 pb-3 m-auto">
-        <h2 class="text-center text-white col-12 fw-bold pb-3">Ejercicios:</h2>
-        <div class="col-md-6" data-bs-theme="dark">
-            <a class="btn btn-outline-secondary" href="Ejercicio3/Ejercicio3.php">Ejercicio 3</a>
-        </div>
-        <div class="col-md-6" data-bs-theme="dark">
-            <a class="btn btn-outline-secondary" href="Ejercicio4/Ejercicio4.php">Ejercicio 4</a>
-        </div>  
-    </section>
+<h1 class="text-center text-white">Trabajo Práctico 3</h1>
+<section class="text-center pt-3">
+    <span class="text-white fw-bold">En desarrollo...</span>
+    <br>
+    <div class="spinner-border text-success" role="status">
+    </div>
+</section>
 </main>
 </body>
 </html>

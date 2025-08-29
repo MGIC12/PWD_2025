@@ -27,7 +27,7 @@
           <a class="nav-link" href="../TP2/index.php">TP 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">TP 3</a>
+          <a class="nav-link" href="../TP3/index.php">TP 3</a>
         </li>
       </ul>
     </div>
