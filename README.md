@@ -32,3 +32,6 @@ Modificar la URL local en tu navegador con la siguiente:
 ## Autor
 
 - Mariano Germán Infante Contreras [[@MGIC12](https://www.github.com/MGIC12)]
+- Facundo Ledesma
+- Benjamín de la Fuente
+- Matias Bacsay
