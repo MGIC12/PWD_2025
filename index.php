@@ -38,28 +38,28 @@
     <h2 class="text-center text-white fw-bold my-5 pt-5">Integrantes:</h2>
     <div class="card-group container my-5 gap-2" data-bs-theme="dark">
       <div class="card rounded-1 border border-secondary">
-        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/150484970?v=4" alt="Card image cap">
+        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/150484970?v=4" alt="Card image cap" loading="lazy">
         <div class="card-body">
           <h4 class="card-title">Facundo Ledesma</h4>
           <p class="card-text">@FacuLedesmaBertalot</p>
         </div>
       </div>
       <div class="card rounded-1 border border-secondary">
-        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/68124872?v=4" alt="Card image cap">
+        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/68124872?v=4" alt="Card image cap" loading="lazy">
         <div class="card-body">
           <h4 class="card-title">Mariano Infante</h4>
           <p class="card-text">@MGIC12</p>
         </div>
       </div>
       <div class="card rounded-1 border border-secondary">
-        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/149085169?v=4" alt="Card image cap">
+        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/149085169?v=4" alt="Card image cap" loading="lazy">
         <div class="card-body">
           <h4 class="card-title">Matias Bacsay</h4>
           <p class="card-text">@tebacs</p>
         </div>
       </div>
       <div class="card rounded-1 border border-secondary">
-        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/206235917?v=4" alt="Card image cap">
+        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/206235917?v=4" alt="Card image cap" loading="lazy">
         <div class="card-body">
           <h4 class="card-title">Benjamín de la Fuente</h4>
           <p class="card-text">@Ibenjamindlf</p>

@@ -35,6 +35,21 @@
 </nav>
 <main class="container bg-primary">
     <h1 class="text-center text-white">Trabajo Práctico 1</h1>
+    <section class="row text-center pt-3 pb-3 m-auto">
+        <h2 class="text-center text-white col-12 fw-bold pb-3">Ejercicios:</h2>
+        <div class="col-md-6" data-bs-theme="dark">
+            <a class="btn btn-outline-secondary" href="Ejercicio1/Ejercicio1.php">Ejercicio 1</a>
+            <a class="btn btn-outline-secondary" href="Ejercicio2/Ejercicio2.php">Ejercicio 2</a>
+            <a class="btn btn-outline-secondary" href="Ejercicio3/Ejercicio3.php">Ejercicio 3</a>
+            <a class="btn btn-outline-secondary" href="Ejercicio4/Ejercicio4.php">Ejercicio 4</a>
+        </div>
+        <div class="col-md-6" data-bs-theme="dark">
+            <a class="btn btn-outline-secondary" href="Ejercicio5/Ejercicio5.php">Ejercicio 5</a>
+            <a class="btn btn-outline-secondary" href="Ejercicio6/Ejercicio6.php">Ejercicio 6</a>
+            <a class="btn btn-outline-secondary" href="Ejercicio7/Ejercicio7.php">Ejercicio 7</a>
+            <a class="btn btn-outline-secondary" href="Ejercicio8/Ejercicio8.php">Ejercicio 8</a>
+        </div>  
+    </section>
 </main>
 </body>
 </html>
