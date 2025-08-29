@@ -6,9 +6,12 @@ Conjunto de trabajos prácticos realizados para la asignatura **Programación We
 
 - **HTML**
 - **PHP**
+- **Javascript**
+- **Bootstrap**
 
 ## Ejecutar localmente
 
+**Necesario clonar el repositorio en htdocs en la carpeta de instalación de XAMPP (C:/xampp/htdocs)**
 Clona el proyecto:
 
 ```bash
@@ -32,6 +35,6 @@ Modificar la URL local en tu navegador con la siguiente:
 ## Autor
 
 - Mariano Germán Infante Contreras [[@MGIC12](https://www.github.com/MGIC12)]
-- Facundo Ledesma
-- Benjamín de la Fuente
-- Matias Bacsay
+- Facundo Ledesma Bertalot [[@FacuLedesmaBertalot](https://www.github.com/FacuLedesmaBertalot)]
+- Benjamín de la Fuente [[@Ibenjamindlf](https://www.github.com/Ibenjamindlf)]
+- Matías Bacsay [[@tebacs](https://www.github.com/tebacs)]
