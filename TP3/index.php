@@ -33,13 +33,13 @@
   </div>
 </nav>
 <main class="container bg-primary">
-<h1 class="text-center text-white">Trabajo Práctico 3</h1>
-<section class="text-center pt-3">
-    <span class="text-white fw-bold">En desarrollo...</span>
-    <br>
-    <div class="spinner-border text-success" role="status">
-    </div>
-</section>
+    <h1 class="text-center text-white">Trabajo Práctico 3</h1>
+    <section class="row text-center pt-3 pb-3 m-auto">
+        <h2 class="text-center text-white col-12 fw-bold pb-3">Ejercicios:</h2>
+        <div class="col-md-6" data-bs-theme="dark">
+            <a class="btn btn-outline-secondary" href="Ejercicio1/Vista/index.php">Ejercicio 1</a>
+        </div> 
+    </section>
 </main>
 </body>
 </html>
