@@ -47,6 +47,7 @@ if (!empty($_FILES['archivo'])) {
     $link = '';
 }
 
+// Procesa la subida de archivos y redirige a la vista con el resultado
 header('Location: ../Vista/index.php?msg=' . urlencode($msg) . '&tipo=' . urlencode($tipo) . '&link=' . urlencode($link));
 exit;
 
