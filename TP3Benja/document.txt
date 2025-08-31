@@ -1,0 +1,11 @@
+La diferencia principal es:
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+Verifica si la petición HTTP fue hecha usando el método POST. Es la forma más precisa y recomendada para saber si el formulario fue enviado por POST.
+
+if ($_POST)
+Verifica si el array $_POST tiene algún valor (no está vacío). Esto puede ser verdadero incluso si la petición no fue POST, por ejemplo, si el array fue modificado manualmente o si hay datos en él por alguna razón. Además, si el formulario POST no envía ningún dato, el array estará vacío y la condición será falsa, aunque la petición sí haya sido POST.
+
+En resumen:
+$_SERVER["REQUEST_METHOD"] == "POST" es más seguro y exacto para detectar envíos de formularios por POST.
+$_POST solo comprueba si hay datos en el array, pero no necesariamente que la petición fue POST.
