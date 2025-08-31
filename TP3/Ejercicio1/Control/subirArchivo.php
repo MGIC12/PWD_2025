@@ -1,32 +1,52 @@
 <?php
-$resultado = [];
 
 if (!empty($_FILES['archivo'])) {
-    $archivo = $_FILES['archivo'];
-    $nombre = basename($archivo['name']);
-    $ext = strtolower(pathinfo($nombre, PATHINFO_EXTENSION));
-    $maximo = 2 * 1024 * 1024;
 
-    if (!in_array($ext, ['pdf', 'doc'])) {
-        $resultado = ['msg' => '❌ Solo se permiten archivos .doc o .pdf', 'tipo' => 'danger'];
-
-    } elseif ($archivo['size'] > $maximo) {
-        $resultado = ['msg' => '❌ El archivo supera los 2MB', 'tipo' => 'danger'];
-
+    if (isset($_FILES['archivo']['error']) && $_FILES['archivo']['error'] !== UPLOAD_ERR_OK) {
+        $msg = '❌ Error al subir el archivo (código '.$_FILES['archivo']['error'].')';
+        $tipo = 'danger';
+        $link = '';
     } else {
-        $uploads = '../Uploads';
+        $archivo = $_FILES['archivo'];
+        $nombre = basename($archivo['name']);
+        $ext = strtolower(pathinfo($nombre, PATHINFO_EXTENSION));
+        $maximo = 2 * 1024 * 1024; // 2MB
 
-        if (!is_dir($uploads)) mkdir($uploads, 0777, true);
-        $ruta = $uploads . '/' . uniqid() . '_' . $nombre;
+        if (!in_array($ext, ['pdf', 'doc'])) {
+            $msg = '❌ Solo se permiten archivos .doc o .pdf';
+            $tipo = 'danger';
+            $link = '';
 
-        if (move_uploaded_file($archivo['tmp_name'], $ruta)) {
-            $resultado = ['msg' => '✅ Archivo subido con éxito', 'tipo' => 'success', 'link' => $ruta];
-            
+        } elseif ($archivo['size'] > $maximo) {
+            $msg = '❌ El archivo supera los 2MB';
+            $tipo = 'danger';
+            $link = '';
+
         } else {
-            $resultado = ['msg' => '❌ Error al guardar el archivo', 'tipo' => 'danger'];
+            $uploadsFs = __DIR__ . '/../Uploads';
+            if (!is_dir($uploadsFs)) mkdir($uploadsFs, 0777, true);
+
+            $nombreFinal = uniqid() . '_' . $nombre;
+            $rutaFs = $uploadsFs . '/' . $nombreFinal;
+
+            if (move_uploaded_file($archivo['tmp_name'], $rutaFs)) {
+                $msg = '✅ Archivo subido con éxito';
+                $tipo = 'success';
+                $link = '../Uploads/' . $nombreFinal;
+
+            } else {
+                $msg = '❌ Error al guardar el archivo';
+                $tipo = 'danger';
+                $link = '';
+            }
         }
     }
+} else {
+    $msg = '❌ No se seleccionó archivo';
+    $tipo = 'danger';
+    $link = '';
 }
 
-return $resultado;
-?>
+header('Location: ../Vista/index.php?msg=' . urlencode($msg) . '&tipo=' . urlencode($tipo) . '&link=' . urlencode($link));
+exit;
+
