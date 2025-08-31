@@ -38,6 +38,7 @@
         <h2 class="text-center text-white col-12 fw-bold pb-3">Ejercicios:</h2>
         <div class="col-md-6" data-bs-theme="dark">
             <a class="btn btn-outline-secondary" href="Ejercicio1/Vista/index.php">Ejercicio 1</a>
+            <a class="btn btn-outline-secondary" href="Ejercicio1Marian/Vista/Ejercicio1Marian.php">Ejercicio 1 Marian</a>
         </div> 
         <div class="col-md-6" data-bs-theme="dark">
             <a class="btn btn-outline-secondary" href="../TP3Benja/Vista/1/inicio.php">Ejercicio 1 benja</a>
