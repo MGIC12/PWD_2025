@@ -39,10 +39,19 @@
     <section class="row text-center pt-3 pb-3 m-auto">
         <h2 class="text-center text-white col-12 fw-bold pb-3">Ejercicios:</h2>
         <div class="col-md-6" data-bs-theme="dark">
+            <a class="btn btn-outline-secondary" href="Ejercicio2/Ejercicio3Benja/vista/Inicio.php">Ejercicio 2.3</a>
+        </div>
+        <div class="col-md-6" data-bs-theme="dark">
+            <a class="btn btn-outline-secondary" href="Ejercicio2/Ejercicio5Benja/vista/Inicio.php">Ejercicio 2.5</a>
+        </div>
+        <div class="col-md-6" data-bs-theme="dark">
+            <a class="btn btn-outline-secondary" href="Ejercicio2/Ejercicio7Benja/vista/Inicio.php">Ejercicio 2.7</a>
+        </div>
+        <div class="col-md-6" data-bs-theme="dark">
             <a class="btn btn-outline-secondary" href="Ejercicio3/Ejercicio3.php">Ejercicio 3</a>
         </div>
         <div class="col-md-6" data-bs-theme="dark">
-            <a class="btn btn-outline-secondary" href="Ejercicio4/Ejercicio4.php">Ejercicio 4</a>
+            <a class="btn btn-outline-secondary" href="Ejercicio4Benja/Vista/inicio.php">Ejercicio 4</a>
         </div>  
     </section>
 </main>
