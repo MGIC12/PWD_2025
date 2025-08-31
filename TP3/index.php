@@ -39,6 +39,9 @@
         <div class="col-md-6" data-bs-theme="dark">
             <a class="btn btn-outline-secondary" href="Ejercicio1/Vista/index.php">Ejercicio 1</a>
         </div> 
+        <div class="col-md-6" data-bs-theme="dark">
+            <a class="btn btn-outline-secondary" href="../TP3Benja/Vista/1/inicio.php">Ejercicio 1 benja</a>
+        </div>
     </section>
 </main>
 </body>
