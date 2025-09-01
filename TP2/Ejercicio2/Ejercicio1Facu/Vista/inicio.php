@@ -26,22 +26,7 @@
     </form>
 
     <script src="../../../../Frameworks/bootstrap.min.js"></script>
-
-    <script>
-        (() => {
-            'use strict';
-            const forms = document.querySelectorAll('.needs-validation');
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        })();
-    </script>
+    <script src="../../scripts.js"></script>
 </body>
 
 </html>

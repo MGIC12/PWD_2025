@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4 - Datos</title>
     <link href="../../../../Frameworks/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body class="container mt-5">
     <h1>Datos</h1>
     <hr>
@@ -41,35 +43,26 @@
     <!-- Bootstrap JS -->
     <script src="../../../../Frameworks/bootstrap.min.js"></script>
 
-    <!-- Validaciones JS -->
+    <!-- Validaciones JS  Globales-->
+    <script src="../../scripts.js"></script>
+    
     <script>
-        (() => {
-            'use strict';
-            const form = document.getElementById('formDatos');
+        const nombre = document.getElementById('nombre');
+        const apellido = document.getElementById('apellido');
 
-            // Validación Bootstrap
-            form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            });
+        const validarLetras = (input) => {
+            const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+            if (!regex.test(input.value)) {
+                input.setCustomValidity("Solo letras y espacios permitidos");
+            } else {
+                input.setCustomValidity("");
+            }
+        };
 
-            // Validación nombre y apellido solo letras y espacios
-            const nombre = document.getElementById('nombre');
-            const apellido = document.getElementById('apellido');
-
-            const soloLetras = e => {
-                e.value = e.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g,'');
-            };
-
-            nombre.addEventListener('input', e => soloLetras(e.target));
-            apellido.addEventListener('input', e => soloLetras(e.target));
-
-        })();
+        [nombre, apellido].forEach(campo => {
+            campo.addEventListener('input', () => validarLetras(campo));
+        });
     </script>
 </body>
+
 </html>
-
-

@@ -1,36 +1,48 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado Datos</title>
-    <link href="../../../../Frameworks/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="container mt-5">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1>Resultado</h1>
-        <a href="../Vista/formulario.php" class="btn btn-secondary">← Volver</a>
-    </div>
-    <hr>
+<?php
+if ($_GET) {
 
-    <?php
-    if ($_GET) {
-        $nombre = htmlspecialchars($_GET['nombre']);
-        $apellido = htmlspecialchars($_GET['apellido']);
-        $edad = (int)($_GET['edad']);
-        $direccion = htmlspecialchars($_GET['direccion']);
+    $nombre = trim($_GET['nombre']);
+    $apellido = trim($_GET['apellido']);
+    $edad = $_GET['edad'];
+    $direccion = trim($_GET['direccion']);
 
-        echo "<div class='card p-3 mb-3'>";
-        echo "<p>Hola, yo soy <b>$nombre $apellido</b>, tengo <b>$edad</b> años y vivo en <b>$direccion</b>.</p>";
-        if ($edad >= 18) {
-            echo "<p class='text-success fw-bold'>Soy Mayor de Edad</p>";
-        } else {
-            echo "<p class='text-warning fw-bold'>Soy Menor de Edad</p>";
-        }
-        echo "</div>";
-    } else {
-        echo "<div class='alert alert-danger'>No se recibieron datos.</div>";
+    $errores = [];
+
+    // Validar nombre y apellido (solo letras y espacios)
+    if (!preg_match("/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/", $nombre)) {
+        $errores[] = "El nombre solo puede contener letras y espacios.";
     }
-    ?>
-</body>
-</html>
+
+    if (!preg_match("/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/", $apellido)) {
+        $errores[] = "El apellido solo puede contener letras y espacios.";
+    }
+
+    // Validar edad (solo números, entre 0 y 999)
+    if (!ctype_digit($edad) || $edad <= 0 || $edad > 999) {
+        $errores[] = "La edad debe ser un número positivo de hasta 3 dígitos.";
+    } else {
+        $edad = (int)$edad; // conversión segura
+    }
+
+
+    // Validar dirección (mínimo 3 caracteres)
+    if (strlen($direccion) < 3) {
+        $errores[] = "La dirección es demasiado corta.";
+    }
+
+    if (empty($errores)) {
+
+        $nombre = htmlspecialchars($nombre);
+        $apellido = htmlspecialchars($apellido);
+        $direccion = htmlspecialchars($direccion);
+
+        // Paso los datos a la vista
+        include "../Vista/datosProcesados.php";
+    } else {
+        // Redirigir al formulario si no hay datos
+        header("Location: ../Vista/formulario.php");
+        exit; // siempre poner exit después de header
+    }
+}
+
+?>

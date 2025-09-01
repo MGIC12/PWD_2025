@@ -1,30 +1,42 @@
 <?php
-// Inicializamos variables
+
 $edad = null;
 $estudiante = null;
 $precio = null;
 $clase = null;
 $error = null;
 
-// Verificamos que se hayan enviado datos
 if ($_GET && isset($_GET['edad'], $_GET['estudiante'])) {
-    $edad = intval($_GET['edad']);
+    $edad = $_GET['edad'];
     $estudiante = $_GET['estudiante'];
 
-    // Lógica de precios
-    if ($estudiante === "si" || $edad < 12) {
-        $precio = 160;
-        $clase = 'alert-success';
-    } else if ($estudiante === "si" && $edad >= 12) {
-        $precio = 180;
-        $clase = 'alert-success';
+    // Validar edad
+    if (!ctype_digit($edad) || $edad <= 0) {
+        $error = "Ingrese una edad válida (número positivo).";
     } else {
-        $precio = 300;
-        $clase = 'alert-info';
+        $edad = (int)$edad;
     }
+
+    // Validar estudiante
+    if ($estudiante !== "si" && $estudiante !== "no") {
+        $error = "Opción de estudiante no válida.";
+    }
+
+    // Lógica de precios solo si no hay error
+    if (!$error) {
+        if ($estudiante === "si" || $edad < 12) {
+            $precio = 160;
+            $clase = 'alert-success';
+        } else {
+            $precio = 300;
+            $clase = 'alert-info';
+        }
+    }
+
 } else {
     $error = "No se recibieron datos.";
 }
 
-// Incluimos la Vista para mostrar los resultados
 include_once '../Vista/resultadoEntrada.php';
+
+?>

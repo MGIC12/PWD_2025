@@ -6,21 +6,19 @@
     <title>Resultados Formulario</title>
     <link href="../../../../Frameworks/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body class="container mt-5">
 
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Resultados</h1>
-        <a href="http://localhost/PWD_2025/TP2/Ejercicio2/Ejercicio6Facu/Vista/inicio.php" class="btn btn-secondary">← Volver</a>
+        <a href="../Vista/inicio.php" class="btn btn-secondary">← Volver</a>
     </div>
     <hr>
 
-    <?php
-    if (isset($error)) {
-        echo '<div class="alert alert-danger">' . $error . '</div>';
-    } else {
-        $claseEdad = ($datos['edad'] >= 18) ? 'bg-success text-white' : 'bg-warning text-dark';
-    ?>
+    <?php if (!empty($error)): ?>
+        <div class="alert alert-danger"><?= $error ?></div>
+    <?php else: ?>
+        <?php $claseEdad = ($datos['edad'] >= 18) ? 'bg-success text-white' : 'bg-warning text-dark'; ?>
+
         <div class="card p-3 mb-3 <?= $claseEdad ?>">
             <h5 class="card-title">Datos Personales</h5>
             <p><b>Nombre:</b> <?= $datos['nombre'] ?> <?= $datos['apellido'] ?></p>
@@ -37,18 +35,17 @@
 
         <div class="card p-3 mb-3">
             <h5 class="card-title">Deportes que practica</h5>
-            <?php if (!empty($datos['deportes'])) { ?>
+            <?php if (!empty($datos['deportes'])): ?>
                 <div class="d-flex flex-wrap gap-2">
-                    <?php foreach ($datos['deportes'] as $dep) { ?>
-                        <span class="badge bg-primary"><?= htmlspecialchars($dep) ?></span>
-                    <?php } ?>
+                    <?php foreach ($datos['deportes'] as $dep): ?>
+                        <span class="badge bg-primary"><?= $dep ?></span>
+                    <?php endforeach; ?>
                 </div>
-            <?php } else { ?>
+            <?php else: ?>
                 <p>No practica deportes.</p>
-            <?php } ?>
+            <?php endif; ?>
         </div>
-    <?php } ?>
+    <?php endif; ?>
 
 </body>
-
 </html>

@@ -114,29 +114,50 @@
     </div>
 
     <script src="../../../../Frameworks/bootstrap.bundle.min.js"></script>
+    <script src="../../scripts.js"></script>
+
     <script>
+        // Validaciones específicas para nombre, apellido y edad
         (() => {
-            'use strict';
-            const form = document.getElementById('formCompleto');
+            const nombre = document.getElementById('nombre');
+            const apellido = document.getElementById('apellido');
+            const edad = document.getElementById('edad');
 
-            form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            });
-
-            // Validación nombre y apellido solo letras y espacios
             const soloLetras = e => {
                 e.value = e.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, '');
             };
 
-            document.getElementById('nombre').addEventListener('input', e => soloLetras(e.target));
-            document.getElementById('apellido').addEventListener('input', e => soloLetras(e.target));
+            // Validación en tiempo real
+            [nombre, apellido].forEach(campo => {
+                campo.addEventListener('input', () => soloLetras(campo));
+            });
 
+            // Validación al enviar el formulario
+            const form = document.getElementById('formCompleto');
+            form.addEventListener('submit', e => {
+                const regexLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+
+                if (!regexLetras.test(nombre.value)) {
+                    nombre.setCustomValidity("Solo letras y espacios permitidos");
+                } else {
+                    nombre.setCustomValidity("");
+                }
+
+                if (!regexLetras.test(apellido.value)) {
+                    apellido.setCustomValidity("Solo letras y espacios permitidos");
+                } else {
+                    apellido.setCustomValidity("");
+                }
+
+                if (!/^\d{1,3}$/.test(edad.value) || edad.value <= 0) {
+                    edad.setCustomValidity("Edad debe ser un número positivo de hasta 3 dígitos");
+                } else {
+                    edad.setCustomValidity("");
+                }
+            });
         })();
     </script>
+
 
 </body>
 
