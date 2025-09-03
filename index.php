@@ -1,106 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./resources/css/styles.css">
-    <link rel="stylesheet" href="./Frameworks/bootstrap.min.css">
-    <title>Inicio - PWD 2025</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - PWD 2025</title>
+  <link rel="stylesheet" href="./Frameworks/bootstrap.min.css">
+  <link rel="stylesheet" href="./resources/css/styleCarrusel.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">PWD 2025</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">PWD 2025</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="Vista/TP1/index.php">TP 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="Vista/TP2/index.php">TP 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="Vista/TP3/index.php">TP 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="container text-center py-5">
+    <h1 class="display-4 fw-bold text-primary">Bienvenidos a PWD 2025</h1>
+    <p class="lead bg-info text-dark d-inline-block px-4 py-2 rounded-pill mt-3 shadow-sm">
+      🚀 Trabajos Prácticos y equipo de desarrollo
+    </p>
+    <div class="mt-4">
+      <a href="#integrantes" class="btn btn-primary btn-lg shadow">Ver equipo de desarrollo</a>
+    </div>
+  </header>
+  <main id="proyectos-destacados" class="container text-center my-5">
+      <h2>proyectos destacados</h2>
+      <div class="mt-4">
+        <a href="Vista/TP1/8/Ejercicio8.php" class="btn btn-primary btn-lg shadow">Ejercicio 8 T.P N°1</a>
+        <a href="Vista/TP2/4Benja/inicio.php" class="btn btn-primary btn-lg shadow">Ejercicio 4 T.P N°2</a>
+        <a href="Vista/TP3/index.php" class="btn btn-primary btn-lg shadow">Ejercicio 3 T.P N°3</a>
+      </div>
+  </main>
+  <!-- Integrantes -->
+<main id="integrantes" class="container my-5">
+  <h2 class="text-center">Equipo de desarrollo</h2>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner text-center">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <a href="https://github.com/Ibenjamindlf" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/206235917?v=4" class="d-inline-block w-25 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="Benja">
+        </a>
+        <div class="mt-3">
+          <h5>Benjamin de la Fuente</h5>
+          <p>@Ibenjamindlf</p>
+          <p>Especialidad: Front</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <a href="https://github.com/tebacs" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/149085169?v=4" class="d-inline-block w-25 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="Mati">
+        </a>
+        <div class="mt-3">
+          <h5>Matias Bacsay</h5>
+          <p>@tebacs</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <a href="https://github.com/MGIC12" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/68124872?v=4" class="d-inline-block w-25 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="marian">
+        </a>
+        <div class="mt-3">
+          <h5>Mariano Infante</h5>
+          <p>@MGIC12</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 (nuevo) -->
+      <div class="carousel-item">
+        <a href="https://github.com/FacuLedesmaBertalot" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/150484970?v=4" class="d-inline-block w-25 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="Facu" alt="nuevo">
+        </a>
+        <div class="mt-3">
+          <h5>Facundo Ledesma</h5>
+          <p>@FacuLedesmaBertalot</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicators (agregamos el cuarto botón) -->
+    <div class="carousel-indicators position-static mt-2">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+
+    <!-- Controles prev/next -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Vista/TP1/index.php">TP 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Vista/TP2/index.php">TP 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Vista/TP3/index.php">TP 3</a>
-        </li>
-      </ul>
-    </div>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-</nav>
-<main class="bg-primary container">
-<div class="typewriter text-center text-white py-5">
-    <span id="text"></span><span class="cursor">&nbsp;</span>
-</div>
-<style>
-  
-.typewriter {
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: "Courier New", monospace;
-}
-
-.cursor {
-  display: inline-block;
-  width: 3px;
-  background-color: #ffffffff;
-  animation: blink 0.7s infinite;
-  margin-left: 5px;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-</style>
-<section>
-  <h2 class="text-center text-white fw-bold my-5 pt-5">Integrantes:</h2>
-    <div class="card-group container my-5 gap-2" data-bs-theme="dark">
-      <div class="card rounded-1 border border-secondary">
-        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/150484970?v=4" alt="Card image cap" loading="lazy">
-        <div class="card-body">
-          <h4 class="card-title">Facundo Ledesma</h4>
-          <p class="card-text">@FacuLedesmaBertalot</p>
-        </div>
-      </div>
-      <div class="card rounded-1 border border-secondary">
-        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/68124872?v=4" alt="Card image cap" loading="lazy">
-        <div class="card-body">
-          <h4 class="card-title">Mariano Infante</h4>
-          <p class="card-text">@MGIC12</p>
-        </div>
-      </div>
-      <div class="card rounded-1 border border-secondary">
-        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/149085169?v=4" alt="Card image cap" loading="lazy">
-        <div class="card-body">
-          <h4 class="card-title">Matias Bacsay</h4>
-          <p class="card-text">@tebacs</p>
-        </div>
-      </div>
-      <div class="card rounded-1 border border-secondary">
-        <img class="card-img-top" src="https://avatars.githubusercontent.com/u/206235917?v=4" alt="Card image cap" loading="lazy">
-        <div class="card-body">
-          <h4 class="card-title">Benjamín de la Fuente</h4>
-          <p class="card-text">@Ibenjamindlf</p>
-        </div>
-      </div>
-    </div>
-</section>
 </main>
-<script src="./resources/js/typewriter.js"></script>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-center text-white py-3 mt-auto shadow">
+    <small>&copy; 2025 PWD - Todos los derechos reservados</small>
+  </footer>
+
+  <script src="./Frameworks/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
