@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio - PWD 2025</title>
   <link rel="stylesheet" href="./Frameworks/bootstrap.min.css">
+  <link rel="stylesheet" href="./resources/css/styleCarrusel.css">
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
 
@@ -33,56 +34,89 @@
       🚀 Trabajos Prácticos y equipo de desarrollo
     </p>
     <div class="mt-4">
-      <a href="#integrantes" class="btn btn-primary btn-lg shadow">Ver integrantes</a>
+      <a href="#integrantes" class="btn btn-primary btn-lg shadow">Ver equipo de desarrollo</a>
     </div>
   </header>
-
+  <main id="proyectos-destacados" class="container text-center my-5">
+      <h2>proyectos destacados</h2>
+      <div class="mt-4">
+        <a href="Vista/TP1/8/Ejercicio8.php" class="btn btn-primary btn-lg shadow">Ejercicio 8 T.P N°1</a>
+        <a href="Vista/TP2/4Benja/inicio.php" class="btn btn-primary btn-lg shadow">Ejercicio 4 T.P N°2</a>
+        <a href="Vista/TP3/index.php" class="btn btn-primary btn-lg shadow">Ejercicio 3 T.P N°3</a>
+      </div>
+  </main>
   <!-- Integrantes -->
-  <main id="integrantes" class="container text-center my-5">
-    <h2 class="fw-bold text-secondary mb-4">Integrantes</h2>
-    <div class="row g-4">
-      
-      <div class="col-sm-6 col-lg-3">
-        <div class="card h-100 shadow border-0 bg-white">
-          <img class="card-img-top" src="https://avatars.githubusercontent.com/u/150484970?v=4" alt="Facundo Ledesma" loading="lazy">
-          <div class="card-body">
-            <h5 class="card-title text-primary fw-bold">Facundo Ledesma</h5>
-            <p class="card-text text-muted">@FacuLedesmaBertalot</p>
-          </div>
+<main id="integrantes" class="container my-5">
+  <h2 class="text-center">Equipo de desarrollo</h2>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner text-center">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <a href="https://github.com/Ibenjamindlf" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/206235917?v=4" class="d-inline-block w-25 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="Benja">
+        </a>
+        <div class="mt-3">
+          <h5>Benjamin de la Fuente</h5>
+          <p>@Ibenjamindlf</p>
+          <p>Especialidad: Front</p>
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg-3">
-        <div class="card h-100 shadow border-0 bg-white">
-          <img class="card-img-top" src="https://avatars.githubusercontent.com/u/68124872?v=4" alt="Mariano Infante" loading="lazy">
-          <div class="card-body">
-            <h5 class="card-title text-success fw-bold">Mariano Infante</h5>
-            <p class="card-text text-muted">@MGIC12</p>
-          </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <a href="https://github.com/tebacs" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/149085169?v=4" class="d-inline-block w-25 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="Mati">
+        </a>
+        <div class="mt-3">
+          <h5>Matias Bacsay</h5>
+          <p>@tebacs</p>
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg-3">
-        <div class="card h-100 shadow border-0 bg-white">
-          <img class="card-img-top" src="https://avatars.githubusercontent.com/u/149085169?v=4" alt="Matias Bacsay" loading="lazy">
-          <div class="card-body">
-            <h5 class="card-title text-danger fw-bold">Matias Bacsay</h5>
-            <p class="card-text text-muted">@tebacs</p>
-          </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <a href="https://github.com/MGIC12" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/68124872?v=4" class="d-inline-block w-25 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="marian">
+        </a>
+        <div class="mt-3">
+          <h5>Mariano Infante</h5>
+          <p>@MGIC12</p>
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg-3">
-        <div class="card h-100 shadow border-0 bg-white">
-          <img class="card-img-top" src="https://avatars.githubusercontent.com/u/206235917?v=4" alt="Benjamín de la Fuente" loading="lazy">
-          <div class="card-body">
-            <h5 class="card-title text-warning fw-bold">Benjamín de la Fuente</h5>
-            <p class="card-text text-muted">@Ibenjamindlf</p>
-          </div>
+      <!-- Slide 4 (nuevo) -->
+      <div class="carousel-item">
+        <a href="https://github.com/FacuLedesmaBertalot" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/150484970?v=4" class="d-inline-block w-25 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="Facu" alt="nuevo">
+        </a>
+        <div class="mt-3">
+          <h5>Facundo Ledesma</h5>
+          <p>@FacuLedesmaBertalot</p>
         </div>
       </div>
-
     </div>
+
+    <!-- Indicators (agregamos el cuarto botón) -->
+    <div class="carousel-indicators position-static mt-2">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+
+    <!-- Controles prev/next -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</main>
+
+
   </main>
 
   <!-- Footer -->
@@ -91,5 +125,6 @@
   </footer>
 
   <script src="./Frameworks/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

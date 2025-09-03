@@ -1,0 +1,33 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* invierte blanco → negro */
+}
+.carousel-control-prev,
+.carousel-control-next {
+  top: 30%;        /* Suben un poco los botones */
+  bottom: auto;    /* Sacamos el centrado completo */
+  transform: translateY(-50%); /* Ajusta la posición vertical */
+}
+
+.carousel-control-prev {
+    transform: translateX(150%); /* Ajusta la posición vertical */
+}
+
+.carousel-control-next {
+    transform: translateX(-150%);
+}
+
+/* Color de los indicadores */
+.carousel-indicators [data-bs-target] {
+  background-color: black;   /* color de los puntitos */
+  width: 10px;   /* tamaño opcional */
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Color distinto cuando está activo */
+.carousel-indicators .active {
+  background-color: #333; /* un negro más fuerte */
+}
+
+

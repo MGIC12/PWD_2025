@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio4.2</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./../../../Frameworks/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="./../../../pruebaAux.php">PWD 2025</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active"  href="./../../../pruebaAux.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="Vista/TP1/index.php">TP 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="Vista/TP2/index.php">TP 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="Vista/TP3/index.php">TP 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
     <main class="container mt-5">
         <section class="card shadow p-4">
             <form class="needs-validation" novalidate action="procesar.php" id="loginForm" method="post">
