@@ -1,5 +1,5 @@
 <?php
-require_once "../Control/validador.php"; 
+require_once "./../../../Control/TP3/2Facu/validador.php"; 
 
 $error = "";
 $contenido = "";

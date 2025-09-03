@@ -15,7 +15,7 @@
             <h3 class="mb-4">Subir Archivo</h3>
 
             <!-- Formulario -->
-            <form id="fileForm" action="../Vista/procesar.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <form id="fileForm" action="procesar.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
 
                 <div class="mb-3">
                     <label for="archivo" class="form-label">Selecciona un archivo: (.txt)</label>
