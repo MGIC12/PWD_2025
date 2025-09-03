@@ -1,0 +1,163 @@
+/* Fondo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del formulario */
+form {
+    background: rgba(20, 20, 20, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Títulos y etiquetas */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+/* Inputs generales */
+input[type="text"],
+input[type="number"],
+input[type="radio"] {
+    accent-color: #ff0000;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 95%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #111;
+    color: #fff;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #ff0000;
+    outline: none;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Campos */
+.campo {
+    margin-bottom: 1.5rem;
+}
+
+/* Opciones de radio */
+.estudios {
+    margin-top: 1rem;
+}
+
+.estudios label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Contenedor de cada opción */
+.estudios .opcion {
+    display: flex;
+    align-items: center;
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.estudios .opcion:hover {
+    border-color: green;
+    box-shadow: 0 0 8px rgba(21, 255, 0, 0.5);
+}
+
+/* Input radio */
+.estudios input[type="radio"] {
+    margin-right: 0.7rem;
+    accent-color: #ff0000; /* Modern browsers */
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Label dentro de la opción */
+.estudios .opcion label {
+    margin: 0;
+    font-weight: normal;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Cuando está seleccionado */
+.estudios input[type="radio"]:checked + label {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* Botones */
+input[type="submit"],
+input[type="reset"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background: blueviolet;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    /* box-shadow: 0 0 10px rgba(255, 0, 0, 0.6); */
+}
+
+/* Espacio entre botones */
+input[type="submit"] {
+    margin-bottom: 1rem;
+    /* margin-right: 4%; */
+}
+
+/* Hover: invertir colores */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: #fff;
+    color: #ff0000;
+    box-shadow: 0 0 15px #fff;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    form {
+        padding: 1.5rem;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
