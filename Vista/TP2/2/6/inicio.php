@@ -10,7 +10,7 @@
 
 <body>
     <div class="container mt-5">
-        <form id="formCompleto" class="row g-3 needs-validation" novalidate method="post" action="./../Control/procesar.php">
+        <form id="formCompleto" class="row g-3 needs-validation" novalidate method="post" action="../../../../Control/TP2/2/6/procesar.php">
 
             <h1>Datos Personales</h1>
             <hr>
@@ -113,8 +113,8 @@
         </form>
     </div>
 
-    <script src="../../../../Frameworks/bootstrap.bundle.min.js"></script>
-    <script src="../../scripts.js"></script>
+    <script src="../../../../Frameworks/bootstrap.min.js"></script>
+    <script src="../scripts.js"></script>
 
     <script>
         // Validaciones específicas para nombre, apellido y edad

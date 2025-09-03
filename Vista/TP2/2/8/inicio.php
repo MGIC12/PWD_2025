@@ -15,7 +15,7 @@
     </div>
     <hr>
 
-    <form id="formCine" class="needs-validation" novalidate method="get" action="../Control/procesamientoEntrada.php">
+    <form id="formCine" class="needs-validation" novalidate method="get" action="../../../../Control/TP2/2/8/procesamientoEntrada.php">
         <div class="mb-3">
             <label for="edad" class="form-label">Edad:</label>
             <input type="number" name="edad" id="edad" class="form-control" required min="0">
@@ -42,8 +42,8 @@
     </form>
 
 
-    <script src="../../../../Frameworks/bootstrap.min.js"></script>
-    <script src="../../scripts.js"></script>
+    <script src="../../../../Frameworks/bootstrap.min.css"></script>
+    <script src="../scripts.js"></script>
     <script>
         (() => {
             const edadInput = document.getElementById('edad');

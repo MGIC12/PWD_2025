@@ -10,7 +10,7 @@
 
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Resultados</h1>
-        <a href="../Vista/inicio.php" class="btn btn-secondary">← Volver</a>
+        <a href="http://localhost/PWD_2025/Vista/TP2/2/6/inicio.php" class="btn btn-secondary">← Volver</a>
     </div>
     <hr>
 

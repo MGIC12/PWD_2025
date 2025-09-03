@@ -9,7 +9,7 @@
 <body class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Resultado</h1>
-        <a href="http://localhost/PWD_2025/TP2/Ejercicio2/Ejercicio4Facu/Vista/formulario.php" class="btn btn-secondary">← Volver</a>
+        <a href="http://localhost/PWD_2025/Vista/TP2/2/4/formulario.php" class="btn btn-secondary">← Volver</a>
     </div>
     <hr>
 

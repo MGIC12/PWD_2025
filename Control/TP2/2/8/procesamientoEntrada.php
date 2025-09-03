@@ -37,6 +37,6 @@ if ($_GET && isset($_GET['edad'], $_GET['estudiante'])) {
     $error = "No se recibieron datos.";
 }
 
-include_once '../Vista/resultadoEntrada.php';
+include_once '../../../../Vista/TP2/2/8/resultadoEntrada.php';
 
 ?>

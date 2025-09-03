@@ -37,10 +37,10 @@ if ($_GET) {
         $direccion = htmlspecialchars($direccion);
 
         // Paso los datos a la vista
-        include "../Vista/datosProcesados.php";
+        include "../../../../Vista/TP2/2/4/datosProcesados.php";
     } else {
         // Redirigir al formulario si no hay datos
-        header("Location: ../Vista/formulario.php");
+        header("Location: ../../../../Vista/TP2/2/4/formulario.php");
         exit; // siempre poner exit después de header
     }
 }

@@ -76,7 +76,7 @@ if ($_POST) {
 }
 
 // Incluir la vista
-include '../Vista/datosProcesados.php';
+include '../../../../Vista/TP2/2/6/datosProcesados.php';
 
 
 ?>

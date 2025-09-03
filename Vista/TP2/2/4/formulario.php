@@ -12,7 +12,7 @@
     <h1>Datos</h1>
     <hr>
 
-    <form action="../Control/datos.php" method="get" class="needs-validation" novalidate id="formDatos">
+    <form action="../../../../Control/TP2/2/4/datos.php" method="get" class="needs-validation" novalidate id="formDatos">
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre:</label>
             <input type="text" name="nombre" id="nombre" class="form-control" required>
