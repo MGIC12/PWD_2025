@@ -1,5 +1,4 @@
 <?php
-class Request{
     function datasubmited() {
     $datos = [];
     if (!empty($_POST)) {
@@ -13,5 +12,4 @@ class Request{
     }
     return $datos;
     }
-}
 ?>
