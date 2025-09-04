@@ -1,0 +1,8 @@
+/* Quitar el check verde de Bootstrap cuando un input es válido */
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  /* border-color: #ced4da !important;   /* gris normal como si no hubiera validación */
+  background-image: none !important;  /* quita el icono de check */
+  box-shadow: none !important;    /* quita el glow verde alrededor */
+} 
