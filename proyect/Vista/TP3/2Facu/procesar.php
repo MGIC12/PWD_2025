@@ -52,14 +52,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivo'])) {
 
         <?php if (!empty($error)): ?>
             <div class="alert alert-danger"><?php echo $error; ?></div>
-            <a href="../Vistas/inicio.php" class="btn btn-secondary">Volver</a>
+            <a href="./inicio.php" class="btn btn-secondary">Volver</a>
         <?php else: ?>
             <div class="alert alert-success">Archivo subido y validado correctamente.</div>
 
             <h5>Contenido del archivo:</h5>
             <textarea class="form-control" rows="12"><?php echo htmlspecialchars($contenido); ?></textarea>
             <br>
-            <a href="../Vista/inicio.php" class="btn btn-primary">Subir otro archivo</a>
+            <a href="./inicio.php" class="btn btn-primary">Subir otro archivo</a>
         <?php endif; ?>
 
     </div>
