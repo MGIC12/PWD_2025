@@ -47,9 +47,9 @@
   <main id="proyectos-destacados" class="container text-center my-5">
       <h2>proyectos destacados</h2>
       <div class="mt-4">
-        <a href="Vista/TP1/8/Ejercicio8.php" class="btn btn-primary btn-lg shadow">Ejercicio 8 T.P N°1</a>
-        <a href="Vista/TP2/4Benja/inicio.php" class="btn btn-primary btn-lg shadow">Ejercicio 4 T.P N°2</a>
-        <a href="Vista/TP3/index.php" class="btn btn-primary btn-lg shadow">Ejercicio 3 T.P N°3</a>
+        <a href="./Vista/TP1/8/Inicio.php" class="btn btn-primary btn-lg shadow">Ejercicio 8 T.P N°1</a>
+        <a href="./Vista/TP2/4/inicio.php" class="btn btn-primary btn-lg shadow">Ejercicio 4 T.P N°2</a>
+        <a href="./Vista/TP3/3Benja/inicio.php" class="btn btn-primary btn-lg shadow">Ejercicio 3 T.P N°3</a>
       </div>
   </main>
   <main id="resolucion-trabajos" class="container text-center my-5">
