@@ -1,0 +1,3 @@
+hola esto es una prueba del text área
+esperemos que vaya bien
+hola mundo

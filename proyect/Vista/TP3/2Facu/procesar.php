@@ -1,11 +1,11 @@
 <?php
 require_once "./../../../Control/TP3/2Facu/validador.php"; 
-
 $error = "";
 $contenido = "";
+include_once  "./../../../Utils/funciones.php";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivo'])) {
-    
+$datos = datasubmited();
+if (!empty($datos)) {
     $validador = new Validador();
     $validador->validarArchivo($_FILES['archivo']);
 
@@ -29,9 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivo'])) {
             $error = "No se pudo guardar el archivo en el servidor.";
         }
     }
-
+    $mostrarContenido = true;  // flag
 } else {
-    $error = "No se recibió ningún archivo.";
+    $mostrarContenido = false;
 }
 ?>
 
@@ -46,11 +46,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivo'])) {
 </head>
 
 <body class="bg-light d-flex flex-column min-vh-100">
-    
-      <!-- Navbar -->
-  <?php
-  include_once('../../structure/header.php');
-  ?>
+    <!-- Navbar -->
+    <?php
+    include_once('../../structure/header.php');
+    ?>
+<?php if ($mostrarContenido): ?> 
     <div class="container mt-5">
 
         <h2 class="mb-4">Resultado de la carga</h2>
@@ -68,9 +68,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivo'])) {
         <?php endif; ?>
 
     </div>
-
+<?php else: ?>
+        <div class="alert alert-warning p-4 m-4" role="alert">
+            <h4>⚠️ Error: no se recibieron datos.</h4>
+            <a href="inicio.php" class="btn btn-outline-dark">Volver al formulario</a>
+        </div>
+<?php endif; ?>
     <!-- footer -->
-   
     <?php
     include_once('../../structure/footer.php');
     ?>
