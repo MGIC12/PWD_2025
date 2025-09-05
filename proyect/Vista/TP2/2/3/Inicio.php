@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
-    <link rel="stylesheet" href="../../../../Frameworks/bootstrap.min.css">
+    <link rel="stylesheet" href="./../../../Frameworks/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -13,7 +13,6 @@
   include_once('../../../structure/header.php');
   ?>
     <div class="container mt-5">
-    <h1>Validacion bootstrap</h1>
     <?php ?>
     <!-- Para cambiar entre GET y POST, modificar los atributos method y action -->
     <div class="contenedor-form">
@@ -67,6 +66,6 @@
     ?>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="./../../../Frameworks/bootstrap.min.js"></script>
 </body>
 </html>

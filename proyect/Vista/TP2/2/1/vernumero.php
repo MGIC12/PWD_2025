@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ver número</title>
         <!-- Bootstrap CSS -->
-        <link href="./../../../../Frameworks/bootstrap.min.css" rel="stylesheet">
+        <link href="./../../../Frameworks/bootstrap.min.css" rel="stylesheet">
     </head>
     <body class="d-flex flex-column min-vh-100">
         <!-- Navbar -->
@@ -43,9 +43,6 @@
     <?php
     include_once('../../../structure/footer.php');
     ?>
-
-
-    <!-- Bootstrap JS -->
-    <script src="../../../../Frameworks/bootstrap.min.js"></script>
+    
 </body>
 </html>
