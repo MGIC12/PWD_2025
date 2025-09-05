@@ -1,22 +1,27 @@
 <?php
-include_once '../../../Control/TP2/4Benja/validador.php';
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $validador = new Validador();
+include_once './../../../Control/TP2/4Benja/validador.php';
+include_once "./../../../Utils/funciones.php";
 
-    $titulo   = $validador->validarTitulo($_POST['titulo'] ?? '');
-    $actores  = $validador->validarActores($_POST['actores'] ?? '');
-    $director      = $validador->validarDirector($_POST['director'] ?? '');
-    $guion         = $validador->validarGuion($_POST['guion'] ?? '');
-    $produccion    = $validador->validarProduccion($_POST['produccion'] ?? '');
-    $anio          = $validador->validarAnio($_POST['anio'] ?? '');
-    $nacionalidad  = $validador->validarNacionalidad($_POST['nacionalidad'] ?? '');
-    $genero        = $validador->validarGenero($_POST['genero'] ?? '');
-    $duracion      = $validador->validarDuracion($_POST['duracion'] ?? '');
-    $restriccion   = $validador->validarRestriccionEdad($_POST['restriccionEdad'] ?? '');
-    $sinopsis      = $validador->validarSinopsis($_POST['sinopsis'] ?? '');
+$datos = datasubmited();
+
+if (!empty($datos) || !empty($archivo)) {
+    $validador = new Validador();
+    // Validaciones de texto
+    $titulo        = $validador->validarTitulo($datos['titulo']        ?? '');
+    $actores       = $validador->validarActores($datos['actores']      ?? '');
+    $director      = $validador->validarDirector($datos['director']    ?? '');
+    $guion         = $validador->validarGuion($datos['guion']          ?? '');
+    $produccion    = $validador->validarProduccion($datos['produccion']?? '');
+    $anio          = $validador->validarAnio($datos['anio']            ?? '');
+    $nacionalidad  = $validador->validarNacionalidad($datos['nacionalidad'] ?? '');
+    $genero        = $validador->validarGenero($datos['genero']        ?? '');
+    $duracion      = $validador->validarDuracion($datos['duracion']    ?? '');
+    $restriccion   = $validador->validarRestriccionEdad($datos['restriccionEdad'] ?? '');
+    $sinopsis      = $validador->validarSinopsis($datos['sinopsis']    ?? '');
+    
+    $mostrarContenido = true;
 } else {
-    // Modificar esto del die, almacenar en una variable para no cortar la ejecucion
-    die("No se recibieron datos");
+    $mostrarContenido = false;
 }
 ?>
 <!DOCTYPE html>

@@ -1,11 +1,19 @@
 <?php
-// Validar solo si viene POST
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    include '../../../../Control/TP2/2/6/procesar.php';
-} else {
-    $error = "No se recibieron datos.";
+include_once ('../../../../Utils/funciones.php');
+include_once "../../../../Control/TP2/2/6/procesar.php";
+
+$datos = datasubmited();
+              
+$archivo = $datos['validacionArchivo'] ?? null;
+
+$bandera = false;
+
+if (!empty($datos) || ($archivo && $archivo['error'] === UPLOAD_ERR_OK)) {
+    $bandera = true;
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,12 +33,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <hr>
 
-    <?php if (!empty($error)): ?>
-        <div class="alert alert-danger"><?= $error ?></div>
-    <?php else: ?>
+    <?php if ($bandera): ?> 
         <?php $claseEdad = ($datos['edad'] >= 18) ? 'bg-success text-white' : 'bg-warning text-dark'; ?>
 
-        <div class=" container card p-3 mb-3 <?= $claseEdad ?>">
+        <div class="container card p-3 mb-3 <?= $claseEdad ?>">
             <h5 class="card-title">Datos Personales</h5>
             <p><b>Nombre:</b> <?= $datos['nombre'] ?> <?= $datos['apellido'] ?></p>
             <p><b>Edad:</b> <?= $datos['edad'] ?> años</p>
@@ -38,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p class="fw-bold"><?= ($datos['edad'] >= 18) ? 'Mayor de Edad' : 'Menor de Edad' ?></p>
         </div>
 
-        <div class=" container card p-3 mb-3">
+        <div class="container card p-3 mb-3">
             <h5 class="card-title">Información Adicional</h5>
             <p><b>Nivel de Estudios:</b> <?= $datos['estudios'] ?></p>
             <p><b>Sexo:</b> <?= $datos['sexo'] ?></p>
@@ -56,6 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p>No practica deportes.</p>
             <?php endif; ?>
         </div>
+    <?php else: ?>
+        <div class="alert alert-warning p-4 m-4" role="alert">
+            <h4>⚠️ Error: no se recibieron datos.</h4>
+            <a href="inicio.php" class="btn btn-outline-dark">Volver al formulario</a>
+        </div>
     <?php endif; ?>
 
     <!-- footer -->
@@ -63,6 +74,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </body>
 </html>
-
-
-

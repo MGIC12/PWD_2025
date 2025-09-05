@@ -1,6 +1,14 @@
 <?php
-include '../../../../Control/TP2/2/8/procesamientoEntrada.php';
+include_once '../../../../Control/TP2/2/8/procesamientoEntrada.php';
+include_once '../../../../Utils/funciones.php';
+
+$datos = datasubmited(); 
+
+$edad = $datos['edad'] ?? null;
+$estudiante = $datos['estudiante'] ?? null;
 ?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

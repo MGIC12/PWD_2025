@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
     <link rel="stylesheet" href="./../../../Frameworks/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body class="d-flex flex-column min-vh-100">
       <!-- Navbar -->
@@ -17,7 +16,7 @@
     <!-- Para cambiar entre GET y POST, modificar los atributos method y action -->
     <div class="contenedor-form">
         <h2>Datos personales</h2>
-        <form class="row g-3 needs-validation" novalidate id="form3" name="form3" method="post" action="DestinoPost.php">
+        <form class="row g-3 needs-validation" novalidate id="form3" name="form3" method="post" action="destino.php">
             <!-- Campo nombre -->
             <div class="col-md-4 input-form input-nombre">
                 <label for="validacionNombre" class="form-label">Nombre</label>  

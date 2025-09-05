@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 2 - Horas cursadas</title>
+
     <link rel="stylesheet" href="../../Frameworks/bootstrap.min.css">
 </head>
 
