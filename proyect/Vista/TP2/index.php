@@ -37,7 +37,7 @@
 
    <!-- Navbar -->
   <?php
-  include_once('../../structure/header.php');
+  include_once('../structure/footer.php');
   ?>
   <script src="../Frameworks/bootstrap.bundle.min.js"></script>
 </body>

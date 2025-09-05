@@ -123,7 +123,7 @@
   <!-- footer -->
    
     <?php
-    include_once('../../structure/footer.php');
+    include_once('Vista/structure/footer.php');
     ?>
 
 

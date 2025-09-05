@@ -17,7 +17,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="/PWD_2025/proyect/index.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/PWD_2025/proyect/index.php">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="/PWD_2025/proyect/Vista/TP1/index.php">TP 1</a></li>
           <li class="nav-item"><a class="nav-link" href="/PWD_2025/proyect/Vista/TP2/index.php">TP 2</a></li>
           <li class="nav-item"><a class="nav-link" href="/PWD_2025/proyect/Vista/TP3/index.php">TP 3</a></li>
