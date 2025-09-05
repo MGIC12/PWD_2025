@@ -18,7 +18,10 @@
     <div class="card shadow-lg p-4 text-center">
       <?php
       include_once './../../../Control/TP1/8/C_Cine.php';
-      if ($_POST){
+            include_once "./../../../Utils/funciones.php";
+      $datos = datasubmited();
+
+      if (!empty($datos)) {
           $nombre = $_POST['nombre'];
           $apellido = $_POST['apellido'];
           $edad = $_POST['edad'];
@@ -39,11 +42,10 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-primary text-center text-white py-3 mt-auto shadow">
-    <small>&copy; 2025 PWD - Todos los derechos reservados</small>
-  </footer>
-
+<!-- footer -->
+  <?php
+  include_once('../../structure/footer.php');
+  ?>
   <script src="./../../../Frameworks/bootstrap.bundle.min.js"></script>
 </body>
 </html>
