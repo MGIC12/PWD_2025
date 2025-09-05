@@ -1,29 +1,34 @@
-<?php 
-    include_once './../../../Control/TP3/3Benja/validador.php';
+<?php
+include_once './../../../Control/TP3/3Benja/validador.php';
+include_once "./../../../Utils/funciones.php";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $validador = new Validador();
+$datos   = datasubmited();                  // Datos del formulario (GET/POST)
+$archivo = $_FILES['validacionArchivo'] ?? null; // Archivo si fue enviado
 
-        $titulo        = $validador->validarTitulo($_POST['titulo'] ?? '');
-        $actores       = $validador->validarActores($_POST['actores'] ?? '');
-        $director      = $validador->validarDirector($_POST['director'] ?? '');
-        $guion         = $validador->validarGuion($_POST['guion'] ?? '');
-        $produccion    = $validador->validarProduccion($_POST['produccion'] ?? '');
-        $anio          = $validador->validarAnio($_POST['anio'] ?? '');
-        $nacionalidad  = $validador->validarNacionalidad($_POST['nacionalidad'] ?? '');
-        $genero        = $validador->validarGenero($_POST['genero'] ?? '');
-        $duracion      = $validador->validarDuracion($_POST['duracion'] ?? '');
-        $restriccion   = $validador->validarRestriccionEdad($_POST['restriccionEdad'] ?? '');
-        $sinopsis      = $validador->validarSinopsis($_POST['sinopsis'] ?? '');
-        if (isset($_FILES['validacionArchivo']) && $_FILES['validacionArchivo']['error'] === UPLOAD_ERR_OK) {
-    $validador->validarArchivo($_FILES['validacionArchivo']);
-} else {
-    $validador->setErrores("No se subió ningún archivo o hubo un error en la carga.");
-}
-
+if (!empty($datos) || !empty($archivo)) {
+    $validador = new Validador();
+    // Validaciones de texto
+    $titulo        = $validador->validarTitulo($datos['titulo']        ?? '');
+    $actores       = $validador->validarActores($datos['actores']      ?? '');
+    $director      = $validador->validarDirector($datos['director']    ?? '');
+    $guion         = $validador->validarGuion($datos['guion']          ?? '');
+    $produccion    = $validador->validarProduccion($datos['produccion']?? '');
+    $anio          = $validador->validarAnio($datos['anio']            ?? '');
+    $nacionalidad  = $validador->validarNacionalidad($datos['nacionalidad'] ?? '');
+    $genero        = $validador->validarGenero($datos['genero']        ?? '');
+    $duracion      = $validador->validarDuracion($datos['duracion']    ?? '');
+    $restriccion   = $validador->validarRestriccionEdad($datos['restriccionEdad'] ?? '');
+    $sinopsis      = $validador->validarSinopsis($datos['sinopsis']    ?? '');
+    // Validación de archivo
+    if ($archivo && $archivo['error'] === UPLOAD_ERR_OK) {
+        $validador->validarArchivo($archivo);
     } else {
-        die("No se recibieron datos");
+        $validador->setErrores("No se subió ningún archivo o hubo un error en la carga.");
     }
+    $mostrarContenido = true;
+} else {
+    $mostrarContenido = false;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +43,7 @@
   <?php
   include_once('../../structure/header.php');
   ?>
+<?php if ($mostrarContenido): ?> 
 <?php if ($validador->hayErrores()): ?>
     <div class="alert alert-danger p-4 m-4" role="alert">
         <h4>Se encontraron errores:</h4>
@@ -50,7 +56,7 @@
     </div>
 <?php else: ?>
     <?php
-        $destino = "../../../Uploads/" . basename($_FILES['validacionArchivo']['name']);
+        $destino = "../Uploads/" . basename($_FILES['validacionArchivo']['name']);
         if (move_uploaded_file($_FILES['validacionArchivo']['tmp_name'], $destino)):
             $extension = strtolower(pathinfo($destino, PATHINFO_EXTENSION));
     ?>
@@ -83,6 +89,12 @@
         </div>
     </div>
     <?php endif; ?>
+<?php endif; ?>
+<?php else: ?>
+        <div class="alert alert-warning p-4 m-4" role="alert">
+            <h4>⚠️ Error: no se recibieron datos.</h4>
+            <a href="inicio.php" class="btn btn-outline-dark">Volver al formulario</a>
+        </div>
 <?php endif; ?>
 
 <!-- footer -->
