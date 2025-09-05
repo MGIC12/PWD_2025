@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TP 1 - PWD 2025</title>
-  <link rel="stylesheet" href="../../Frameworks/bootstrap.min.css">
+  <link rel="stylesheet" href="../Frameworks/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="../../resources/css/styles.css"> -->
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
@@ -46,6 +46,6 @@
     <small>&copy; 2025 PWD - Todos los derechos reservados</small>
   </footer>
 
-  <script src="../../Frameworks/bootstrap.bundle.min.js"></script>
+  <script src="../Frameworks/bootstrap.bundle.min.js"></script>
 </body>
 </html>

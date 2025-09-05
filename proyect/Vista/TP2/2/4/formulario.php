@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4 - Datos</title>
-    <link href="../../../../Frameworks/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../Frameworks/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -20,7 +20,7 @@
     <h1>Datos</h1>
     <hr>
 
-    <form action="../../../../Control/TP2/2/4/datos.php" method="get" class="needs-validation" novalidate id="formDatos">
+    <form action="datosProcesados.php" method="get" class="needs-validation" novalidate id="formDatos">
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre:</label>
             <input type="text" name="nombre" id="nombre" class="form-control" required>

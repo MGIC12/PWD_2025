@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../../../Frameworks/bootstrap.min.css">
-     <!-- Bootstrap CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../../Frameworks/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
 </head>
+
 <body class="bg-light d-flex flex-column min-vh-100">
 
   <!-- Navbar -->
@@ -27,23 +29,23 @@
         <div class="card shadow-lg border-0 rounded-3">
           <div class="card-body p-4">
             <h2 class="h4 mb-4 text-center fw-bold">Calculadora Básica</h2>
-            
+
             <form class="row g-3 needs-validation" novalidate action="procesar.php" method="post">
-              
+
               <!-- Primer número -->
               <div class="col-md-6">
                 <label for="validacionPrimerDigito" class="form-label">Primer dígito</label>
                 <input type="number" class="form-control" id="validacionPrimerDigito" name="num1" required>
                 <div class="invalid-feedback">Por favor, ingrese el primer dígito.</div>
               </div>
-              
+
               <!-- Segundo número -->
               <div class="col-md-6">
                 <label for="validacionSegundoDigito" class="form-label">Segundo dígito</label>
                 <input type="number" class="form-control" id="validacionSegundoDigito" name="num2" required>
                 <div class="invalid-feedback">Por favor, ingrese el segundo dígito.</div>
               </div>
-              
+
               <!-- Operación -->
               <div class="col-12">
                 <label for="validacionOperacion" class="form-label">Operación</label>
@@ -56,7 +58,7 @@
                 </select>
                 <div class="invalid-feedback">Por favor, seleccione una operación.</div>
               </div>
-              
+
               <!-- Botones -->
               <div class="col-12 d-flex justify-content-center gap-3 mt-3">
                 <button class="btn btn-primary px-4" type="submit">Enviar</button>
@@ -71,14 +73,15 @@
 
 
   <!-- Scripts -->
+  <script src="../../../Frameworks/bootstrap.min.js"></script>
   <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
 
   <!-- footer -->
-   
-    <?php
-    include_once('../../../structure/footer.php');
-    ?>
+
+  <?php
+  include_once('../../../structure/footer.php');
+  ?>
 
 </body>
 

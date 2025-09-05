@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bienvenida - PWD 2025</title>
-  <link rel="stylesheet" href="./Frameworks/bootstrap.min.css">
+  <link rel="stylesheet" href="./proyect/Vista/Frameworks/bootstrap.min.css">
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
 
@@ -49,11 +49,11 @@
   <!-- footer -->
    
     <?php
-    include_once('../../structure/footer.php');
+    include_once('./proyect/Vista/structure/footer.php');
     ?>
 
 
-  <script src="./Frameworks/bootstrap.bundle.min.js"></script>
+  <script src="./proyect/Vista/Frameworks/bootstrap.min.js"></script>
   <script src="./resources/js/validacionNombre.js"></script>
   <script src="inicioScript.js"></script>
 </body>

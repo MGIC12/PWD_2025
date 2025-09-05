@@ -1,5 +1,4 @@
 <?php
-
 $edad = null;
 $estudiante = null;
 $precio = null;
@@ -32,11 +31,6 @@ if ($_GET && isset($_GET['edad'], $_GET['estudiante'])) {
             $clase = 'alert-info';
         }
     }
-
 } else {
     $error = "No se recibieron datos.";
 }
-
-include_once '../../../../Vista/TP2/2/8/resultadoEntrada.php';
-
-?>

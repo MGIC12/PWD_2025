@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3 Destino POST</title>
     <link rel="stylesheet" href="styleDestino.css">
+    <link rel="stylesheet" href="./../../../Frameworks/bootstrap.min.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
      <!-- Navbar -->
