@@ -6,7 +6,7 @@
   <title>Bienvenida - PWD 2025</title>
   <link rel="stylesheet" href="./proyect/Vista/Frameworks/bootstrap.min.css">
 </head>
-<body class="bg-light d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100">
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">

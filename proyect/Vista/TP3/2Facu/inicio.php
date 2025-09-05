@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../Frameworks/bootstrap.min.css">
 </head>
 
-<body class="bg-light d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100">
 
      
       <!-- Navbar -->

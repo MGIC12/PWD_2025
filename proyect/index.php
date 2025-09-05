@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="./Vista//Frameworks/bootstrap.min.css">
   <link rel="stylesheet" href="./resources/css/styleCarrusel.css">
 </head>
-<body class="bg-light d-flex flex-column min-vh-100">
+
+<body class="d-flex flex-column min-vh-100">
 
    <!-- Navbar -->
   <?php
