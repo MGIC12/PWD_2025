@@ -28,8 +28,11 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="./../../../Frameworks/bootstrap.min.css">
 </head>
-<body>
-
+<body class="d-flex flex-column min-vh-100">
+      <!-- Navbar -->
+  <?php
+  include_once('../../structure/header.php');
+  ?>
 <?php if ($validador->hayErrores()): ?>
     <div class="alert alert-danger p-4 m-4" role="alert">
         <h4>Se encontraron errores:</h4>
@@ -59,6 +62,12 @@
         <a href="inicio.php" class="btn btn-outline-dark">Volver al formulario</a>
     </div>
 <?php endif; ?>
+
+ <!-- footer -->
+   
+    <?php
+    include_once('../../structure/footer.php');
+    ?>
 
 </body>
 </html>

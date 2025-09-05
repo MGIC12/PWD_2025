@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="contenedor-mensaje">
+    <div class="contenedor-mensaje d-flex flex-column min-vh-100">
         <?php
             // Lista de usuarios registrados
             $usuario1 = [
@@ -60,6 +60,13 @@
         <div class="volverAlogin">
             <a href="inicio.php">Volver al formulario</a>
         </div>
+
+        <!-- footer -->
+   
+    <?php
+    include_once('../../../structure/footer.php');
+    ?>
+
     </div>
 </body>
 </html>

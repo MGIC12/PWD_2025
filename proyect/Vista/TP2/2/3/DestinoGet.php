@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3 Destino GET</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+    
+     <!-- Navbar -->
+  <?php
+  include_once('../../../structure/header.php');
+  ?>
     <h1>GET</h1>
     <?php
     if ($_GET){
@@ -24,6 +29,13 @@
     }
     ?>
     <a href="Inicio.php">Volver al formulario</a>
+
+    <!-- footer -->
+   
+    <?php
+    include_once('../../../structure/footer.php');
+    ?>
+
 </body>
 </html>
 

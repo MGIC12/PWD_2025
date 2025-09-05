@@ -6,7 +6,13 @@
     <title>Horas cursadas</title>
     <link href="./../../../../Frameworks/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="container mt-5">
+<body class="container mt-5 d-flex flex-column min-vh-100">
+
+ <!-- Navbar -->
+  <?php
+  include_once('../../../structure/header.php');
+  ?>
+  
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Horas cursadas</h1>
         <a href="inicio.php" class="btn btn-secondary">← Volver</a>
@@ -35,6 +41,12 @@
             ?>
         </div>
     </div>
+
+    <!-- footer -->
+   
+    <?php
+    include_once('../../../structure/footer.php');
+    ?>
 
     <script src="./../../../../Frameworks/bootstrap.min.js"></script>
 </body>

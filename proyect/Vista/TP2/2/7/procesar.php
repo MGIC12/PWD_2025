@@ -6,7 +6,12 @@
     <title>Resultado</title>
     <link rel="stylesheet" href="styleProcesar.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+
+ <!-- Navbar -->
+  <?php
+  include_once('../../../structure/header.php');
+  ?>
     <div class="resultado-contenedor">
         <h1 class="titulo">Resultado de la Operación</h1>
         <div class="resultado-box">
@@ -42,5 +47,12 @@
         </div>
         <a href="Inicio.php" class="btn-volver">⬅ Volver al inicio</a>
     </div>
+
+    <!-- footer -->
+   
+    <?php
+    include_once('../../../structure/footer.php');
+    ?>
+
 </body>
 </html>

@@ -15,9 +15,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../Frameworks/bootstrap.min.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+
+
+      <!-- Navbar -->
+  <?php
+  include_once('../../structure/header.php');
+  ?>
     <!-- Abrimos sentencia if con " : " para mas adelante cerrarlo -->
     <?php if ($validador->hayErrores()): ?>
         <div class="alert alert-danger p-4 m-4" role="alert">
@@ -59,6 +65,13 @@
     <?php endif; ?>
     <!-- Cerramos sentencia if (Linea 21) y sentencia else (Linea 30) con "endif;"  -->
     <!-- se utiliza la sentencia if...else...endif; en lugar de las llaves {} para delimitar bloques de código PHP dentro de HTML. Esto mejora la legibilidad del código al integrarlo con HTML. -->
+
+    <!-- footer -->
+   
+    <?php
+    include_once('../../structure/footer.php');
+    ?>
+
 </body>
 </html>
 

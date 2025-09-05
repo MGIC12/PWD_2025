@@ -9,23 +9,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="../../../index.php">PWD 2025</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="../../../index.php">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="../../TP1/index.php">TP 1</a></li>
-          <li class="nav-item"><a class="nav-link" href="../../TP2/index.php">TP 2</a></li>
-          <li class="nav-item"><a class="nav-link active fw-bold" href="./../index.php">TP 3</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-    <main class="container mt-5">
+     <!-- Navbar -->
+  <?php
+  include_once('../../structure/header.php');
+  ?>
+    <main class="container mt-5 d-flex flex-column min-vh-100">
         <section class="card shadow p-4">
             <form class="needs-validation" novalidate action="procesar.php" id="loginForm" method="post" enctype="multipart/form-data">
                 <h2 class="mb-4 text-primary">🎬 Cinem@s</h2>
@@ -145,5 +133,9 @@
     <script src="scriptValidacionForm.js"></script>
     <!-- <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script> -->
+<!-- footer -->
+  <?php
+  include_once('../../structure/footer.php');
+  ?>
 </body>
 </html>

@@ -6,8 +6,12 @@
     <title>Resultados Formulario</title>
     <link href="../../../../Frameworks/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="container mt-5">
-
+<body class="container mt-5 d-flex flex-column min-vh-100">
+     <!-- Navbar -->
+  <?php
+  include_once('../../../structure/header.php');
+  ?>
+  
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Resultados</h1>
         <a href="http://localhost/PWD_2025/Vista/TP2/2/6/inicio.php" class="btn btn-secondary">← Volver</a>
@@ -46,6 +50,12 @@
             <?php endif; ?>
         </div>
     <?php endif; ?>
+
+    <!-- footer -->
+   
+    <?php
+    include_once('../../../structure/footer.php');
+    ?>
 
 </body>
 </html>

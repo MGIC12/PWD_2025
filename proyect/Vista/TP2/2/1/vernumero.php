@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver número</title>
-    <!-- Bootstrap CSS -->
-    <link href="./../../../../Frameworks/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="container mt-5">
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ver número</title>
+        <!-- Bootstrap CSS -->
+        <link href="./../../../../Frameworks/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <!-- Navbar -->
+  <?php
+  include_once('../../../structure/header.php');
+  ?>
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Resultado</h1>
         <a href="inicio.php" class="btn btn-secondary">← Volver</a>
     </div>
     <hr>
-
+    
     <div class="card">
         <div class="card-body">
             <?php
@@ -34,6 +37,13 @@
             ?>
         </div>
     </div>
+    
+    <!-- footer -->
+   
+    <?php
+    include_once('../../../structure/footer.php');
+    ?>
+
 
     <!-- Bootstrap JS -->
     <script src="../../../../Frameworks/bootstrap.min.js"></script>

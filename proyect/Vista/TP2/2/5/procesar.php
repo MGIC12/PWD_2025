@@ -6,7 +6,11 @@
     <title>Resultado</title>
     <link rel="stylesheet" href="resultado.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+     <!-- Navbar -->
+  <?php
+  include_once('../../../structure/header.php');
+  ?>
     <div class="resultado-container">
         <h1>Resultado del formulario</h1>
         <?php
@@ -31,6 +35,14 @@
             }
         ?>
         <a href="Inicio.php">⬅ Volver al formulario</a>
+
     </div>
+
+    <!-- footer -->
+   
+    <?php
+    include_once('../../../structure/footer.php');
+    ?>
+
 </body>
 </html>

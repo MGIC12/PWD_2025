@@ -46,10 +46,12 @@
     </div>
   </header>
 
-  <!-- Footer -->
-  <footer class="bg-primary text-center text-white py-3 mt-auto shadow">
-    <small>&copy; 2025 PWD - Todos los derechos reservados</small>
-  </footer>
+  <!-- footer -->
+   
+    <?php
+    include_once('../../structure/footer.php');
+    ?>
+
 
   <script src="./Frameworks/bootstrap.bundle.min.js"></script>
   <script src="./resources/js/validacionNombre.js"></script>

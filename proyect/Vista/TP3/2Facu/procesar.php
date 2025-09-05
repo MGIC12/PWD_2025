@@ -45,7 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivo'])) {
     <link rel="stylesheet" href="../../../Frameworks/bootstrap.min.css">
 </head>
 
-<body class="bg-light">
+<body class="bg-light d-flex flex-column min-vh-100">
+    
+      <!-- Navbar -->
+  <?php
+  include_once('../../structure/header.php');
+  ?>
     <div class="container mt-5">
 
         <h2 class="mb-4">Resultado de la carga</h2>
@@ -63,6 +68,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivo'])) {
         <?php endif; ?>
 
     </div>
+
+    <!-- footer -->
+   
+    <?php
+    include_once('../../structure/footer.php');
+    ?>
+
 </body>
 </html>
 

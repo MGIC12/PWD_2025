@@ -6,7 +6,12 @@
     <link rel="stylesheet" href="../../../Frameworks/bootstrap.min.css">
     <title>Ejercicio 1 - TP 3</title>
 </head>
-<body class="container bg-secondary">
+<body class="container bg-secondary d-flex flex-column min-vh-100">
+    
+      <!-- Navbar -->
+  <?php
+  include_once('../../structure/header.php');
+  ?>
     <h1 class="text-center mt-5 fw-bold">Subir Archivo</h1>
     <div class="container mt-5 bg-dark shadow-lg rounded-3 p-4" data-bs-theme="dark">
     <form action="../../../Control/TP3/1Marian/ControladorArchivo.php" method="post" enctype="multipart/form-data">
@@ -15,5 +20,12 @@
         <button type="submit" class="btn btn-outline-success mt-3">Subir archivo</button>
     </form>
     </div>
+
+    <!-- footer -->
+   
+    <?php
+    include_once('../../structure/footer.php');
+    ?>
+
 </body>
 </html>

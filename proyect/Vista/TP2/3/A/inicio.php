@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div class="contenedor-form">
         <form action="verificaPass.php" method="post">
             <h2>Member login</h2>
@@ -22,5 +22,12 @@
             </div>
         </form>
     </div>
+
+    <!-- footer -->
+   
+    <?php
+    include_once('../../../structure/footer.php');
+    ?>
+
 </body>
 </html>

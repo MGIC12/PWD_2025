@@ -9,11 +9,9 @@
 <body class="bg-light d-flex flex-column min-vh-100">
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="../../index.php">PWD 2025</a>
-    </div>
-  </nav>
+  <?php
+  include_once('../../structure/header.php');
+  ?>
 
   <!-- Resultado -->
   <main class="container my-5">

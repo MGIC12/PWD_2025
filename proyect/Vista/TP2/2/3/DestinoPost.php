@@ -6,7 +6,11 @@
     <title>Ejercicio 3 Destino POST</title>
     <link rel="stylesheet" href="styleDestino.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+     <!-- Navbar -->
+  <?php
+  include_once('../../../structure/header.php');
+  ?>
     <div class="container">
         <h1 class="titulo">Datos recibidos (POST)</h1>
         <?php
@@ -23,6 +27,13 @@
         ?>
         <a href="Inicio.php" class="volver">⬅ Volver al formulario</a>
     </div>
+
+    <!-- footer -->
+   
+    <?php
+    include_once('../../../structure/footer.php');
+    ?>
+
 </body>
 
 </html>

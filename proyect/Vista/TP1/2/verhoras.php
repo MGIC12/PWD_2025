@@ -1,4 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="../../../Frameworks/bootstrap.min.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    
 <?php
+// Navbar
+  
+  include_once('../../structure/header.php');
+  
 $horasPWDL = $_GET["horasL"];
 $horasPWDM = $_GET["horasM"];
 $horasPWDMi = $_GET["horasMi"];
@@ -18,3 +34,11 @@ echo $horasPWDarray . "<br>";
 echo "El total de horas cursadas por semana es de: " . $horasTotal." horas";
 
 ?>
+  <!-- footer -->
+   
+    <?php
+    include_once('../../structure/footer.php');
+    ?>
+</body>
+
+</html>
