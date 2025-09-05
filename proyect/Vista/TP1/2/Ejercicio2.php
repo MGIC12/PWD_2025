@@ -16,28 +16,37 @@
   ?>
   
   
-    <h1>TP1 - Ejercicio 2</h1>
-    <hr>
-    <h2>Horas de cursada PWD</h2>
-    <form action="verhoras.php" method="get">
-        <label for="horas">Horas Lunes: </label>
-        <input type="number" name="horasL" id="horasL">
-        <br><br>
-        <label for="horas">Horas Martes: </label>
-        <input type="number" name="horasM" id="horasM">
-        <br><br>
-        <label for="horas">Horas Miércoles: </label>
-        <input type="number" name="horasMi" id="horasMi">
-        <br><br>
-        <label for="horas">Horas Jueves: </label>
-        <input type="number" name="horasJ" id="horasJ">
-        <br><br>
-        <label for="horas">Horas Viernes: </label>
-        <input type="number" name="horasV" id="horasV">
-        <br><br>
-        <button type="submit">Obtener horas por día</button>
-    </form>
-
+    <h1 class="text-center m-3 fw-bold">TP1 - Ejercicio 2</h1>
+    <div class="container shadow-lg">
+      <form action="verhoras.php" method="get" class="row m-3">
+        <div class="col-md-12">
+          <h2 class="text-center">Horas de cursada PWD</h2>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="horas" class="form-label">Horas Lunes: </label>
+          <input type="number" name="horasL" id="horasL" class="form-control" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="horas">Horas Martes: </label>
+          <input type="number" name="horasM" id="horasM" class="form-control" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="horas">Horas Miércoles: </label>
+          <input type="number" name="horasMi" id="horasMi" class="form-control" required>
+        </div>
+        <div class="col-md-6 mb-3">  
+          <label for="horas">Horas Jueves: </label>
+          <input type="number" name="horasJ" id="horasJ" class="form-control" required>
+        </div>
+        <div class="col-md-12 mb-3">
+          <label for="horas">Horas Viernes: </label>
+          <input type="number" name="horasV" id="horasV" class="form-control" required>
+        </div>
+        <div class="col-md-12 mb-3">
+          <button type="submit" class="btn btn-primary mt-3">Obtener horas por día</button>
+        </div>
+        </form>
+    </div>
       <!-- footer -->
    
     <?php

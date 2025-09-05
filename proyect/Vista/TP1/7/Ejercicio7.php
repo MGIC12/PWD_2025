@@ -13,24 +13,25 @@
   include_once('../../structure/header.php');
   ?>
   
-    <h1>TP1 - Ejercicio 7</h1>
-    <hr><br>
-    <form action="calculadora.php" method="get">
-        <label for="num1">Número 1: </label>
-        <input type="number" name="num1" id="num1" required>
-        <br><br>
-        <label for="num2">Número 2: </label>
-        <input type="number" name="num2" id="num2" required>
-        <br><br>
-        <select name="operacion" id="operacion">
-            <option value="sumar">Sumar</option>
-            <option value="restar">Restar</option>
-            <option value="multiplicar">Multiplicar</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Enviar">
-    </form>
-
+    <h1 class="text-center m-3 fw-bold">TP1 - Ejercicio 7</h1>
+    <div class="container shadow-lg">
+        <form action="calculadora.php" method="get" class="m-3">
+            <label for="num1" class="form-label">Número 1: </label>
+            <input type="number" name="num1" id="num1" class="form-control mb-3" required>
+            
+            <label for="num2" class="form-label">Número 2: </label>
+            <input type="number" name="num2" id="num2" class="form-control mb-3" required>
+            
+            <label for="operacion" class="form-label">Operación: </label>
+            <select name="operacion" id="operacion" class="form-select mb-3" required>
+                <option value="sumar">Sumar</option>
+                <option value="restar">Restar</option>
+                <option value="multiplicar">Multiplicar</option>
+            </select>
+            
+            <input type="submit" value="Enviar" class="btn btn-primary mb-3">
+        </form>
+    </div>
     <!-- footer -->
    
     <?php

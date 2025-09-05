@@ -12,19 +12,37 @@
     
 <?php
 // Navbar
-  
   include_once('../../structure/header.php');
-  
-$nombre = $_POST["nombre"];
-$apellido = $_POST["apellido"];
-$edad = $_POST["edad"];
-$direccion = $_POST["direccion"];
-
-echo "Hola, yo soy ", "<b>$nombre</b>", ", ", "<b>$apellido</b>", ", ", "tengo ", "<b>$edad</b>", " años y vivo en ", "<b>$direccion</b>";
-
-
 ?>
+<div>
+  <a href="http://localhost/PWD_2025/proyect/Vista/TP1/3/Ejercicio3.php">
+    <button class="btn btn-primary w-25" data-bs-theme="dark">← Volver a la página anterior</button>
+  </a>
+</div>
+<div class="container text-center mt-3">
+  <h2 class="text-center fw-bold mb-3">Datos ingresados:</h2>
+<?php
+  include_once("../../../Utils/funciones.php");
+  $datos = datasubmited();
+  if (!empty($datos)) {
+    $nombre = $datos["nombre"];
+    $apellido = $datos["apellido"];
+    $edad = $datos["edad"];
+    $direccion = $datos["direccion"];
+    $mostrarContenido = true;
+  } else {
+    $mostrarContenido = false;
+  }
 
+  if (!$mostrarContenido) {
+    $rta = "No se han ingresado datos";
+    exit($rta);
+  } else {
+    $rta = "Hola, yo soy ". $nombre ." ". $apellido . ", ". "tengo ". $edad. " años y vivo en ". $direccion . ".";
+    echo $rta;
+  }
+?>
+</div>
 <!-- footer -->
    
     <?php

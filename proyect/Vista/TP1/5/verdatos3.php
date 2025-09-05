@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -14,31 +14,56 @@
 // Navbar
   
   include_once('../../structure/header.php');
+?>
+<div>
+  <a href="http://localhost/PWD_2025/proyect/Vista/TP1/5/Ejercicio5.php">
+    <button class="btn btn-primary w-25" data-bs-theme="dark">← Volver a la página anterior</button>
+  </a>
+</div>
+<div class="container text-center mt-3">
+  <h2 class="text-center fw-bold mb-3">Datos ingresados:</h2>
+<?php
 
-$nombre = $_GET["nombre"];
-$apellido = $_GET["apellido"];
-$edad = $_GET["edad"];
-$direccion = $_GET["direccion"];
-$estudios = $_GET["estudios"];
-$sexo = $_GET["sexo"];
+include_once("../../../Utils/funciones.php");
 
-if ($estudios == "S"){
-    echo "Hola, yo soy ", "<b>$nombre</b>", ", ", "<b>$apellido</b>", ", ", "tengo ", "<b>$edad</b>", " años y vivo en ", "<b>$direccion</b>", " y tengo estudios secundarios";
+//Obtener los datos
+$datos = datasubmited();
+  if (!empty($datos)) {
+    $nombre = $datos["nombre"];
+    $apellido = $datos["apellido"];
+    $edad = $datos["edad"];
+    $direccion = $datos["direccion"];
+    $estudios = $datos["estudios"];
+    $sexo = $datos["sexo"];
+    $mostrarContenido = true;
+  } else {
+    $mostrarContenido = false;
+  }
+
+  if (!$mostrarContenido) {
+    $rta = "No se han ingresado datos";
+    exit($rta);
+  } else if ($estudios == "S"){
+    $rta = "Hola, yo soy ".$nombre. " ".$apellido. ", tengo ". $edad. " años y vivo en ". $direccion. " y tengo estudios secundarios";
+    
 } else if ($estudios == "P"){
-    echo "Hola, yo soy ", "<b>$nombre</b>", ", ", "<b>$apellido</b>", ", ", "tengo ", "<b>$edad</b>", " años y vivo en ", "<b>$direccion</b>", " y tengo estudios primarios";
+    $rta = "Hola, yo soy ".$nombre. " ". $apellido.", tengo ". $edad. " años y vivo en ". $direccion. " y tengo estudios primarios";
+    
 } else if ($estudios == "N"){
-    echo "Hola, yo soy ", "<b>$nombre</b>", ", ", "<b>$apellido</b>", ", ", "tengo ", "<b>$edad</b>", " años y vivo en ", "<b>$direccion</b>", " y no tengo estudios";
+    $rta = "Hola, yo soy ".$nombre. " ". $apellido. ", tengo ". $edad. " años y vivo en ". $direccion. " y no tengo estudios";
+   
 }
 
 if ($sexo == "M"){
-    echo " y soy hombre";
+    $rta .= " y soy hombre";
+    echo $rta;
 } else if ($sexo == "F"){
-    echo " y soy mujer";
+    $rta .= " y soy mujer";
+    echo $rta;
 }
 
-
-
 ?>
+</div>
 <!-- footer -->
    
     <?php
