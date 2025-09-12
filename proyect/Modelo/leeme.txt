@@ -1,1 +1,0 @@
-En esta primera implementación de los Trabajos Prácticos 1, 2 y 3 no se establece la necesidad de emplear la capa modelo; por tal motivo, no se incluyen archivos ni directorios correspondientes a la misma.
