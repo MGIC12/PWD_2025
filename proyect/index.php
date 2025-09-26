@@ -46,6 +46,7 @@
         <a href="./Vista/TP1/index.php" class="btn btn-primary btn-lg shadow">Trabajo Practico N°1</a>
         <a href="./Vista/TP2/index.php" class="btn btn-primary btn-lg shadow">Trabajo Practico N°2</a>
         <a href="./Vista/TP3/index.php" class="btn btn-primary btn-lg shadow">Trabajo Practico N°3</a>
+        <a href="../Project/View/home/indexT4.php" class="btn btn-primary btn-lg shadow">Trabajo Practico N°4</a>
       </div>
   </main>
   <!-- Integrantes -->

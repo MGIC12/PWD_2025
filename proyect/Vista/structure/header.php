@@ -21,6 +21,7 @@
           <li class="nav-item"><a class="nav-link" href="/PWD_2025/proyect/Vista/TP1/index.php">TP 1</a></li>
           <li class="nav-item"><a class="nav-link" href="/PWD_2025/proyect/Vista/TP2/index.php">TP 2</a></li>
           <li class="nav-item"><a class="nav-link" href="/PWD_2025/proyect/Vista/TP3/index.php">TP 3</a></li>
+          <li class="nav-item"><a class="nav-link" href="/PWD_2025/Project/View/home/indexT4.php">TP 4</a></li>
         </ul>
       </div>
     </div>

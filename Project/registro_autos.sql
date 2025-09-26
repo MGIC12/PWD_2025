@@ -1,5 +1,5 @@
-CREATE DATABASE registro_autos;
-USE registro_autos;
+CREATE DATABASE infoautos;
+USE infoautos;
 
 CREATE TABLE persona (
     NroDni VARCHAR(10) NOT NULL,

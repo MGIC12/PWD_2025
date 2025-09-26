@@ -43,7 +43,7 @@ include_once $GLOBALS['ROOT'] . 'Project/View/components/header.php';
                                 
                                 <!-- Boton para verAutos, dependiendo el dni -->
                                 <td class="text-center">
-                                    <a href="autosPersona.php?dni=<?php echo urlencode($unaPersona->getNroDNI()); ?>" class="btn btn-primary btn-sm">
+                                    <a href="../acciones/accionAutosPersona.php?nroDni=<?php echo urlencode($unaPersona->getNroDNI()); ?>" class="btn btn-primary btn-sm">
                                         Ver Autos
                                     </a>
                                 </td>
@@ -56,7 +56,7 @@ include_once $GLOBALS['ROOT'] . 'Project/View/components/header.php';
                     <?php } ?>
                 </tbody>
             </table>
-            <a class="btn btn-primary" href="autosPersona.php">Autos Persona</a>
+            <!-- <a class="btn btn-primary" href="autosPersona.php">Autos Persona</a> -->
         </div>
     </section>
 </div>

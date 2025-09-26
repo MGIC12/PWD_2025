@@ -10,7 +10,7 @@ $datos = data_submitted();
 $nroDniPersona = $datos['nroDni'];
 // Busco autos según la patente
 $unaPersona = $abmPersona->buscar(['nroDni' => $nroDniPersona]);
-print_r($unaPersona);
+// print_r($unaPersona);
 // echo $nroDniPersona;
 include_once $GLOBALS['ROOT'] . 'Project/View/components/header.php';
 
@@ -84,7 +84,7 @@ include_once $GLOBALS['ROOT'] . 'Project/View/components/header.php';
     <?php } ?>
     <?php } ?>
     <div class="mt-5">
-        <a href="../admin/autosPersona.php" class="btn btn-outline-primary">Volver</a>
+        <a href="../admin/listaPersonas.php" class="btn btn-outline-primary mb-5">Volver</a>
     </div>
 </div>
 
