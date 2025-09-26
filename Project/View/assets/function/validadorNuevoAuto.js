@@ -58,7 +58,7 @@ const regexDNI = /^\d{8}$/;
 // Eventos en tiempo real
 divPatente.addEventListener("input", () =>
   validarCampo(divPatente, patenteInvalido, patenteValido, regexPatente,
-    "Ingrese una patente valida.", mensajeInvalidoVacio, mensajeValido)
+    "Ingrese una patente valida (AAA-123).", mensajeInvalidoVacio, mensajeValido)
 );
 divMarca.addEventListener("input", () =>
   validarCampo(divMarca, marcaInvalido, marcaValido, regexMarca,
@@ -75,7 +75,7 @@ divNroDniDuenio.addEventListener("input", () =>
 
 // Evento al enviar formulario
 document.getElementById("loginForm").addEventListener("submit", function (event) {
-    const patenteOK = validarCampo(divPatente, patenteInvalido, patenteValido, regexPatente,"Ingrese una patente valida.", mensajeInvalidoVacio, mensajeValido);
+    const patenteOK = validarCampo(divPatente, patenteInvalido, patenteValido, regexPatente,"Ingrese una patente valida (AAA-123).", mensajeInvalidoVacio, mensajeValido);
 
     const marcaOK = validarCampo(divMarca, marcaInvalido, marcaValido, regexMarca,"Ingrese una marca valida.", mensajeInvalidoVacio, mensajeValido);
 
