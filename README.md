@@ -32,6 +32,14 @@ Modificar la URL local en tu navegador con la siguiente:
   http://localhost/PWD_2025/
 ```
 
+**Si se desea ejecutar el t.p N°4 se debe activar MySQL e ir a Admin**
+
+Importar la siguiente base de datos:
+
+```bash
+  /Project/registro_autos.sql
+```
+
 ## Autor
 
 - Mariano Germán Infante Contreras [[@MGIC12](https://www.github.com/MGIC12)]
