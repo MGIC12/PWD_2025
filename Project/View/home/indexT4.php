@@ -25,7 +25,7 @@
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title text-primary">Ver Autos</h5>
                         <p class="card-text">Consulta el listado completo de autos con sus respectivos dueños.</p>
-                        <a href="./View/verAutos.php" class="btn btn-primary mt-auto">Ir</a>
+                        <a href="../admin/administrarAutos.php" class="btn btn-primary mt-auto">Ir</a>
                     </div>
                 </div>
             </div>
