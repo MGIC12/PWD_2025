@@ -4,7 +4,7 @@ $titulo = 'Ingresar persona';
 include_once $GLOBALS['ROOT'] . 'Project/View/components/header.php';
 ?>
 <!-- header propio -->
-<header class="py-1">
+<header class="bg-light py-1">
     <div class="container px-4 px-lg-5 my-2">
         <div class="text-center text-white">
             <h2>Ingresar una persona</h2>
