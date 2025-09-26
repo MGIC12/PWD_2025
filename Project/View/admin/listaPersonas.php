@@ -9,10 +9,10 @@ include_once $GLOBALS['ROOT'] . 'Project/View/components/header.php';
 ?>
 
 <!-- Header propio -->
-<header class="bg-dark py-1">
+<header class="py-1">
     <div class="container px-4 px-lg-5 my-2">
         <div class="text-center text-white">
-            <h4>Listado de personas</h4>
+            <h2>Listado de personas</h2>
         </div>
     </div>
 </header>
@@ -23,11 +23,12 @@ include_once $GLOBALS['ROOT'] . 'Project/View/components/header.php';
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th class="text-center">Nombre y Apellido Propietario</th>
+                        <th class="text-center">Nombre y Apellido</th>
                         <th class="text-center">Numero DNI</th>
                         <th class="text-center">Fecha de nacimiento</th>
                         <th class="text-center">Telefono</th>
                         <th class="text-center">Domicilio</th>
+                        <th class="text-center">Autos</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +40,13 @@ include_once $GLOBALS['ROOT'] . 'Project/View/components/header.php';
                                 <td class="text-center"><?php echo $unaPersona->getFechaNac(); ?></td>
                                 <td class="text-center"><?php echo $unaPersona->getTelefono(); ?></td>
                                 <td class="text-center"><?php echo $unaPersona->getDomicilio(); ?></td>
+                                
+                                <!-- Boton para verAutos, dependiendo el dni -->
+                                <td class="text-center">
+                                    <a href="autosPersona.php?dni=<?php echo urlencode($unaPersona->getNroDNI()); ?>" class="btn btn-primary btn-sm">
+                                        Ver Autos
+                                    </a>
+                                </td>
                             </tr>
                         <?php } 
                     } else { ?>
