@@ -35,7 +35,7 @@
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title text-primary">Listar Personas</h5>
                         <p class="card-text">Visualiza todas las personas registradas en el sistema, a su vez los autos que tiene en posesión.</p>
-                        <a href="View/listarPersonas.php" class="btn btn-primary mt-auto">Ir</a>
+                        <a href="../admin/listaPersonas.php" class="btn btn-primary mt-auto">Ir</a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title text-primary">Nueva Persona</h5>
                         <p class="card-text">Agrega una nueva persona al sistema completando el formulario.</p>
-                        <a href="View/nuevaPersona.php" class="btn btn-primary mt-auto">Ir</a>
+                        <a href="../admin/nuevaPersona.php" class="btn btn-primary mt-auto">Ir</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title text-primary">Nuevo Auto</h5>
                         <p class="card-text">Registra un nuevo auto y asígnale un dueño.</p>
-                        <a href="View/nuevoAuto.php" class="btn btn-primary mt-auto">Ir</a>
+                        <a href="../admin/nuevoAuto.php" class="btn btn-primary mt-auto">Ir</a>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title text-primary">Cambio de Dueño</h5>
                         <p class="card-text">Realiza la transferencia de un auto a un nuevo propietario.</p>
-                        <a href="View/cambioDuenio.php" class="btn btn-primary mt-auto">Ir</a>
+                        <a href="../admin/CambioDuenio.php" class="btn btn-primary mt-auto">Ir</a>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title text-primary">Buscar Persona</h5>
                         <p class="card-text">Busca una persona específica por DNI y gestiona sus datos.</p>
-                        <a href="View/buscarPersona.php" class="btn btn-primary mt-auto">Ir</a>
+                        <a href="../admin/buscarPersona.php" class="btn btn-primary mt-auto">Ir</a>
                     </div>
                 </div>
             </div>
