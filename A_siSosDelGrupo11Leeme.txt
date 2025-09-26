@@ -1,0 +1,11 @@
+Hola chicos.
+Tengan en cuenta que deben hacer un   git clone https://github.com/MGIC12/PWD_2025.git
+Dentro de la carpeta Htdocs, si ustedes crean una carpeta en Htdocs y ahi hacen el git clone
+el proyecto no va a funcionar con las rutas.
+
+A su vez, dentro de la carpeta Project, se encuentra el .sql para que ejecuten
+Si no crean la BDD el t.p n°4 no va a funcionar, la BDD debe tener como nombre "infoautos".
+
+Si llegan a tener alguna duda no duden en escribir a uno de los integrantes del grupo.
+
+Firma: benja :)
